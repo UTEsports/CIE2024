@@ -71,6 +71,7 @@
     font-size: 16px;
     text-decoration: none;
     font-family: 'Rajdhani', sans-serif;
+    border-radius: 20px;
   }
 </style>
 </head>
@@ -92,19 +93,19 @@
     <form name="team1info" method="post" onsubmit="saveData('team1info', event)" id="t1">
       <h3>Team 1</h3>
       <div class="team-info">
-        <label for="t1_name">Team 1 Name:</label>
+        <label for="t1_name">Team 1 Name (10 characters max for styling):</label>
         <input type="text" id="t1_name" name="name">
       </div><br>
       <div class="team-info">
-        <label for="t2_name">Team 1 Logo (image link):</label>
-        <input type="text" id="t2_name" name="logo">
+        <label for="t1_logo">Team 1 Logo (image link):</label>
+        <input type="text" id="t1_logo" name="logo">
       </div><br>
       <input type="submit" value="Submit">
     </form>
     <form name="team2info" method="post" onsubmit="saveData('team2info', event)" id="t2">
       <h3>Team 2</h3>
       <div class="team-info">
-        <label for="t1_name">Team 2 Name:</label>
+        <label for="t1_name">Team 2 Name (10 characters max for styling):</label>
         <input type="text" id="t1_name" name="name">
       </div><br>
       <div class="team-info">
@@ -432,6 +433,7 @@ const heroes = [
 
 const maps = [
   "Control",
+  "Clash",
   "Hybrid",
   "Escort",
   "Push",

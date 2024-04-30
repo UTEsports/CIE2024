@@ -12,42 +12,42 @@
   <!-- Container for stacking -->
 <div class="stack-container">
     <img class="stacked-image" id="mapset">
-    <div class="rajdhani-semibold" id="total-score">
-        <div style="font-size: 40px; color: #0D534D;" id="testing">MATCH SCORE</div><br>
-        <div style="font-size: 96px; font-weight: 900;" id="miniscore"></div>
-        <img id="logo1" style="height:135px; width:135px;"></img>
-        <img id="logo2" style="height:135px; width:135px;"></img>
+    <div id="total-score">
+        <div style="font-size: 25px; color: #0D534D;" id="match-score" class="druk-wide-medium">MATCH SCORE</div><br>
+        <div style="font-size: 80px; font-weight: 900;" id="miniscore" class="druk-wide-heavy"></div>
+        <img id="logo1" style="height:136px; width:136px;"></img>
+        <img id="logo2" style="height:136px; width:136px;"></img>
     </div>
     
-    <div class="rajdhani-bold bo3">
+    <div class="druk-medium-text bo3">
         <img id="bo3m1display" onerror="this.style.opacity='0'">
         <div id="bo3m1state"></div>
     </div>
-    <div class="rajdhani-bold bo3">
+    <div class="druk-medium-text bo3">
         <img id="bo3m2display" onerror="this.style.opacity='0'">
         <div id="bo3m2state"></div>
     </div>
-    <div class="rajdhani-bold bo3">
+    <div class="druk-medium-text bo3">
         <img id="bo3m3display" onerror="this.style.opacity='0'">
         <div id="bo3m3state"></div>
     </div>
-    <div class="rajdhani-bold bo5">
+    <div class="druk-medium-text bo5">
         <img id="bo5m1display" onerror="this.style.opacity='0'">
         <div id="bo5m1state"></div>
     </div>
-    <div class="rajdhani-bold bo5">
+    <div class="druk-medium-text bo5">
         <img id="bo5m2display" onerror="this.style.opacity='0'">
         <div id="bo5m2state"></div>
     </div>
-    <div class="rajdhani-bold bo5">
+    <div class="druk-medium-text bo5">
         <img id="bo5m3display" onerror="this.style.opacity='0'">
         <div id="bo5m3state"></div>
     </div>
-    <div class="rajdhani-bold bo5">
+    <div class="druk-medium-text bo5">
         <img id="bo5m4display" onerror="this.style.opacity='0'">
         <div id="bo5m4state"></div>
     </div>
-    <div class="rajdhani-bold bo5">
+    <div class="druk-medium-text bo5">
         <img id="bo5m5display" onerror="this.style.opacity='0'">
         <div id="bo5m5state"></div>
     </div>
@@ -57,16 +57,18 @@
 
     function convertToFileName(userInput) {
         if (!userInput) {
-        return "";
-    }
+            return "";
+        }
+
         // Convert user input to uppercase and remove spaces
         const cleanedInput = userInput.replace(/ /g, '');
 
-        // Replace apostrophe with an empty string
-        const fileName = cleanedInput.replace(/[':]/g, '');
+        // Replace apostrophes with an empty string
+        const fileName = cleanedInput.replace(/['’]/g, '');
 
         return fileName;
     }
+
     function setMapMode(map, divId){
         const control = [
             "Control",
@@ -118,22 +120,27 @@
         ]
 
         if(control.includes(map)){
-            localStorage.setItem(divId + 'icon', 'assets\\ow_maps\\modeicon_control.png')
+            localStorage.setItem(divId + 'icon', 'assets\\ow_maps\\modeicon_control.png');
+            localStorage.setItem(divId + 'mode', 'control');
         }else if(escort.includes(map)){
-            localStorage.setItem(divId + 'icon', 'assets\\ow_maps\\modeicon_escort.png')
+            localStorage.setItem(divId + 'icon', 'assets\\ow_maps\\modeicon_escort.png');
+            localStorage.setItem(divId + 'mode', 'escort');
         }else if(hybrid.includes(map)){
-            localStorage.setItem(divId + 'icon', 'assets\\ow_maps\\modeicon_hybrid.png')
+            localStorage.setItem(divId + 'icon', 'assets\\ow_maps\\modeicon_hybrid.png');
+            localStorage.setItem(divId + 'mode', 'hybrid');
         }else if(push.includes(map)){
-            localStorage.setItem(divId + 'icon', 'assets\\ow_maps\\modeicon_push.png')
+            localStorage.setItem(divId + 'icon', 'assets\\ow_maps\\modeicon_push.png');
+            localStorage.setItem(divId + 'mode', 'push');
         }else if(flashpoint.includes(map)){
-            localStorage.setItem(divId + 'icon', 'assets\\ow_maps\\modeicon_flashpoint.png')
+            localStorage.setItem(divId + 'icon', 'assets\\ow_maps\\modeicon_flashpoint.png');
+            localStorage.setItem(divId + 'mode', 'flashpoint');
         }else if(clash.includes(map)){
-            localStorage.setItem(divId + 'icon', 'assets\\ow_maps\\modeicon_clash.png')
+            localStorage.setItem(divId + 'icon', 'assets\\ow_maps\\modeicon_clash.png');
+            localStorage.setItem(divId + 'mode', 'clash');
         }
     }
 
-
-    function retrieveMaps(){
+    function setScore(){
         var bo3scores = [localStorage.getItem('bo3m1winner'), localStorage.getItem('bo3m2winner'), localStorage.getItem('bo3m3winner')]
 
         var t1Count = bo3scores.filter(function(item) {
@@ -146,7 +153,10 @@
 
         var miniscore = document.getElementById('miniscore');
         miniscore.innerHTML = t1Count + " - " + t2Count;
+    }
 
+    function retrieveMaps(){
+        setScore();
         var logo1 = document.getElementById('logo1');
         logo1.src = localStorage.getItem('t1_logo');
 
@@ -281,6 +291,7 @@
             div.innerHTML = "<br><br><br><br><h1>UP NEXT</h1><h2>" + map +"</h2><img src=" + icon + ">"
         } else if (state === 'ipr') {
             div.classList.add('ipr');
+            localStorage.setItem('current-map', mapnum);
             div.innerHTML = "<br><br><h1 style=\"font-size: 100px;\">" + scores + "</h1><h2>" + map +"</h2><img src=" + icon + ">";
         } else if (state == 'done'){
             if(parseInt(localStorage.getItem(tile + '_team1_' + mapnum + '_score')) > parseInt(localStorage.getItem(tile + '_team2_' + mapnum + '_score'))){
@@ -290,8 +301,9 @@
                 localStorage.setItem(tile + 'winner', 't1');
                 
             }else if(parseInt(localStorage.getItem(tile + '_team1_' + mapnum + '_score')) == parseInt(localStorage.getItem(tile + '_team2_' + mapnum + '_score'))){
-                div.innerHTML = "<br><br><br><h1>DRAW</h1><h1 style=\"margin-bottom: -50px;\">" + scores + "</h1><h2>" + map +"</h2><img src=" + icon + ">";
+                div.innerHTML = "<br><br><br><h1>DRAW</h1><h1 style=\"margin-bottom: -49px;\">" + scores + "</h1><h2>" + map +"</h2><img src=" + icon + ">";
                 div.classList.add('done-draw');
+                localStorage.setItem(tile + 'winner', 'null');
             }
             else{
                 var winner = localStorage.getItem('t2_logo')

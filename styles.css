@@ -1,3 +1,39 @@
+@font-face {
+  font-family: 'DrukMedium';
+  src: url('DrukFonts/Druk-Medium-Trial.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'DrukMediumText';
+  src: url('DrukFonts\\DrukText-Medium-Trial.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'DrukWideBold';
+  src: url('DrukFonts\\DrukWide-Bold-Trial.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'DrukWideMedium';
+  src: url('DrukFonts\\DrukWide-Medium-Trial.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'DrukWideHeavy';
+  src: url('DrukFonts\\DrukTextWide-Heavy-Trial.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'DrukSuperWide';
+  src: url('DrukFonts\\DrukTextWide-Super-Trial.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'DrukHeavyText';
+  src: url('DrukFonts\\DrukText-Heavy-Trial.otf') format('opentype');
+}
+
+
 body {
     font-family: 'Rajdhani', sans-serif;
     text-align: center;
@@ -36,6 +72,40 @@ body {
     font-family: "Rajdhani", sans-serif;
     font-weight: 700;
     font-style: normal;
+  }
+
+  /* Druk Medium Text */
+  .druk-medium-text {
+    font-family: "DrukMediumText", sans-serif;
+  }
+
+  /* Druk Medium */
+  .druk-medium {
+    font-family: "DrukMedium", sans-serif;
+  }
+
+  /* Druk Wide Bold */
+  .druk-wide-bold {
+    font-family: "DrukWideBold", sans-serif;
+  }
+
+  /* Druk Wide Medium */
+  .druk-wide-medium {
+    font-family: "DrukWideMedium", sans-serif;
+  }
+
+  /* Druk Wide Heavy */
+  .druk-wide-heavy {
+    font-family: "DrukWideHeavy", sans-serif;
+  }
+
+  .druk-heavy-text {
+    font-family: "DrukHeavyText", sans-serif;
+  }
+
+  /* Druk Super Wide */
+  .druk-super-wide {
+    font-family: "DrukSuperWide", sans-serif;
   }
 
   form {
@@ -189,6 +259,11 @@ body {
     
     transform: translate(250px, 287px);
   }
+}
+
+#match-score{
+  position: relative;
+  top: 5px;
 }
 
 #animatedImage1 {
@@ -355,9 +430,10 @@ img[src=""] {
   position: absolute;
   height: 100px;
   width: 327px;
-  top: 908px;
+  top: 900px;
   left: 100px;
   z-index: 1;
+  font-size: 40px;
   overflow-x: clip;
 }
 
@@ -365,9 +441,10 @@ img[src=""] {
   position: absolute;
   height: 100px;
   width: 327px;
-  top: 908px;
+  top: 900px;
   left: 448px;
   z-index: 1;
+  font-size: 40px;
   overflow-x: clip;
 }
 
@@ -375,9 +452,10 @@ img[src=""] {
   position: absolute;
   height: 100px;
   width: 327px;
-  top: 908px;
+  top: 900px;
   left: 796px;
   z-index: 1;
+  font-size: 40px;
   overflow-x: clip;
 }
 
@@ -385,9 +463,10 @@ img[src=""] {
   position: absolute;
   height: 100px;
   width: 327px;
-  top: 908px;
+  top: 900px;
   left: 1144px;
   z-index: 1;
+  font-size: 40px;
   overflow-x: clip;
 }
 
@@ -395,17 +474,19 @@ img[src=""] {
   position: absolute;
   height: 100px;
   width: 327px;
-  top: 908px;
+  top: 900px;
   left: 1492px;
   z-index: 1;
+  font-size: 40px;
   overflow-x: clip;
 }
 
 .roster-team{
+  font-family: 'DrukWideHeavy', sans-serif;
   position: absolute;
   height: 128;
   width: 428;
-  top: 50px;
+  top: 20px;
   left: 287px;
   font-size: 100px;
 }
@@ -504,7 +585,7 @@ select{
 
 #miniscore{
   position: absolute;
-  top: 30px;
+  top: 20px;
   height: 122px;
   width: 644.25px;
   color: #0D534D;
@@ -518,11 +599,80 @@ form{
 #logo1{
   position: absolute;
   top: 10px;
-  left: 5px;
+  left: 30px;
 }
 
 #logo2{
   position: absolute;
   top: 10px;
-  right: 5px;
+  right: 30px;
+}
+
+.overlay-logo{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-color: transparent;
+}
+
+#overlay-format{
+  position:absolute; 
+  z-index: 3; 
+  color:white; 
+  top: 10px;
+  left: 891px;
+  height: 22px;
+  width: 140px;
+  font-size: 18px;
+}
+
+#current-map{
+  position:absolute; 
+  z-index: 3; 
+  color:white; 
+  top: 33px;
+  left: 891px;
+  height: 22px;
+  width: 140px;
+  font-size: 10px;
+}
+
+#bo3-mapset, #bo5-mapset{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  height: 23px;
+  width: 515px;
+  left: 1353px;
+  top: 10.5px;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 1;
+}
+
+.map-off{
+  padding: 10px;
+  font-size: 8px;
+  color: rgba(255, 255, 255, 0.31);
+}
+
+.map-label{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#overlay-name-1{
+  position: absolute;
+  top: 45px;
+  left: 119px;
+  font-size: 25px;
+}
+
+#overlay-name-2{
+  position: absolute;
+  top: 45px;
+  right: 119px;
+  font-size: 25px;
 }
