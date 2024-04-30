@@ -285,6 +285,7 @@
         // Apply the appropriate class based on the state
         if (state === 'unplayed') {
             div.classList.add('unplayed');
+            localStorage.setItem(tile + 'winner', 'null');
             div.innerHTML = "<br><br><br><br><br><h1>" + map +"</h1><img src=" + icon + ">"
         } else if (state === 'upnext') {
             div.classList.add('upnext');
@@ -292,6 +293,7 @@
         } else if (state === 'ipr') {
             div.classList.add('ipr');
             localStorage.setItem('current-map', mapnum);
+            localStorage.setItem(tile + 'winner', 'null');
             div.innerHTML = "<br><br><h1 style=\"font-size: 100px;\">" + scores + "</h1><h2>" + map +"</h2><img src=" + icon + ">";
         } else if (state == 'done'){
             if(parseInt(localStorage.getItem(tile + '_team1_' + mapnum + '_score')) > parseInt(localStorage.getItem(tile + '_team2_' + mapnum + '_score'))){
