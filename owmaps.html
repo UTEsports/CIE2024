@@ -54,7 +54,10 @@
 
   <script>
     retrieveMaps();    
-
+    localStorage.setItem('bo3m1winner', 'null');
+    localStorage.setItem('bo3m2winner', 'null');
+    localStorage.setItem('bo3m3winner', 'null');
+    
     function convertToFileName(userInput) {
         if (!userInput) {
             return "";
