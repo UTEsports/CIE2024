@@ -194,7 +194,7 @@ body {
   .caster-1-name {
     position: absolute;
     color:#fff;
-    top: 625px; /* Adjust the top position as needed */
+    top: 615px; /* Adjust the top position as needed */
     left: 300px; /* Adjust the left position as needed */
     z-index: 2;
     font-size: 36px;
@@ -202,7 +202,7 @@ body {
   .caster-1-tag {
     position: absolute;
     color:#fff;
-    top: 670px; /* Adjust the top position as needed */
+    top: 668px; /* Adjust the top position as needed */
     left: 300px; /* Adjust the left position as needed */
     z-index: 2;
     font-size: 24px;
@@ -211,7 +211,7 @@ body {
   .caster-2-name {
     position: absolute;
     color:#fff;
-    top: 625px; /* Adjust the top position as needed */
+    top: 615px; /* Adjust the top position as needed */
     left: 1000px; /* Adjust the left position as needed */
     z-index: 2;
     font-size: 36px;
@@ -219,7 +219,7 @@ body {
   .caster-2-tag {
     position: absolute;
     color:#fff;
-    top: 670px; /* Adjust the top position as needed */
+    top: 668px; /* Adjust the top position as needed */
     left: 1000px; /* Adjust the left position as needed */
     z-index: 2;
     font-size: 24px;
@@ -482,6 +482,7 @@ img[src=""] {
 }
 
 .roster-team{
+  color: white;
   font-family: 'DrukWideHeavy', sans-serif;
   position: absolute;
   height: 128;
@@ -676,3 +677,5 @@ form{
   right: 119px;
   font-size: 25px;
 }
+
+ 

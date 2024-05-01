@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Container for stacking -->
+<div class="stack-container">
+
+    <div id="int-1-name" class="caster-1-Iname druk-medium-text"></div>
+
+    <div id="int-2-name" class="caster-2-Iname druk-medium-text"></div>
+
+    <div id="caster-3-name" class="druk-medium-text"></div>
+    <div id="caster-3-tag" class="druk-medium-text"></div>
+
+    <img class="stacked-image" id="vs-asset" alt="vs">
+    <img class="stacked-image" src="assets\casters_and_interviews\interview_cam_box.png" alt="Image Description">
+    
+    <script>
+        // Retrieve form data from localStorage
+        var c1name = localStorage.getItem('casters_c1name');
+        var c2name = localStorage.getItem('casters_c2name');
+        var vs = localStorage.getItem('casters_null');
+
+        var intname = localStorage.getItem('casters_intname');
+        var inttag = localStorage.getItem('casters_inttag');
+
+        // Display data
+        var c1nDiv = document.getElementById('caster-1-name');
+        c1nDiv.innerHTML = '<p>' + c1name + '</p>';
+
+        var c2nDiv = document.getElementById('caster-2-name');
+        c2nDiv.innerHTML = '<p>' + c2name + '</p>';
+
+        var c3nDiv = document.getElementById('caster-3-name');
+        c3nDiv.innerHTML = '<p>' + intname + '</p>';
+
+        var c3tDiv = document.getElementById('caster-3-tag');
+        c3tDiv.innerHTML = '<p>' + inttag + '</p>';
+
+
+        var vsElement = document.getElementById('vs-asset');
+        vsElement.src = vs;
+        
+    </script>
+</div>
+</body>
+
+</html>

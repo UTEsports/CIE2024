@@ -81,7 +81,38 @@
 
 <h1>Overwatch Controller</h1>
 
-<button class="gen-info rajdhani-medium" style="font-size: xx-large;">General Information (Casters, Team Info, Break Screen)</button>
+<button class="collapsible rajdhani-medium" style="font-size: xx-large;">Casters
+  <span class="dropdown-icon">&#9660;</span> <!-- Downward arrow icon -->
+</button>
+<div class="content">
+  <button type="button" onclick="resetForm(this)" class="reset" style="font-size: xx-large;">Reset</button>
+  <div class="content" style="display: flex; justify-content: center; align-items: center;">
+    <form id="casters" onsubmit="saveData('casters', event)" method="POST">
+      <h3>Edit Caster Screen</h3>
+      <label for="c1name">Caster 1 Name:</label><br>
+      <input type="text" id="c1name" name="c1name"><br>
+      <label for="c1tag">Caster 1 Tag:</label><br>
+      <input type="text" id="c1tag" name="c1tag"><br>
+
+      <label for="c2name">Caster 2 Name:</label><br>
+      <input type="text" id="c2name" name="c2name"><br>
+      <label for="c2tag">Caster 2 Tag:</label><br>
+      <input type="text" id="c2tag" name="c2tag"><br>
+      
+      <label for="intname">Interviewee Name (for interview screen):</label><br>
+      <input type="text" id="intname" name="intname"><br>
+      <label for="inttag">Interviewee Tag:</label><br>
+      <input type="text" id="inttag" name="inttag"><br>
+
+      <label for="vs" id="vs" name="vs">VS Screen Selection:</label>
+      <select id="vs-choice" class="big-dropdown">
+        <option value="choice1">With Score</option>
+        <option value="choice2">No Score</option>
+    </select><br>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
 
 <button class="collapsible rajdhani-medium" style="font-size: xx-large;">Match Information
   <span class="dropdown-icon">&#9660;</span> <!-- Downward arrow icon -->
@@ -546,6 +577,14 @@ function swap(button) {
 
 function saveData(formName, event) {
   event.preventDefault(); // Prevent the form from submitting
+  var imagePath;
+  var vs = document.getElementById('vs-choice').value;
+  if (vs === "choice1") {
+      imagePath = "assets\\casters_and_interviews\\casters_vs_2.png";
+  } else {
+      imagePath = "assets\\casters_and_interviews\\casters_vs_1.png";
+  }
+  localStorage.setItem('vsImagePath', imagePath); // Store the file path
 
   // Get the form element
   var form = document.forms[formName];
@@ -562,6 +601,7 @@ function saveData(formName, event) {
     var selectedValue = select.value;
     // Save the selected value in local storage with the form ID as the key
     localStorage.setItem(formId + '_' + selectName, selectedValue);
+    
 
   });
 
