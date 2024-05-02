@@ -678,4 +678,31 @@ form{
   font-size: 25px;
 }
 
- 
+#overlay-score-1{
+  position: absolute;
+  top: 45px;
+  left: 511px;
+  width: 56px;
+  color: #1E1E1E;
+  height: 56px;
+  font-size: 25px;
+}
+
+#overlay-score-2{
+  position: absolute;
+  top: 45px;
+  color: #1E1E1E;
+  right: 511px;
+  width: 56px;
+  height: 56px;
+  font-size: 25px;
+}
+
+body {
+  text-transform: uppercase;
+}
+
+/* Apply to specific elements */
+h1, h2, h3, h4, h5, h6, p, span, div, a {
+  text-transform: uppercase;
+}

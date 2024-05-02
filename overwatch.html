@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="styles.css">
 
 <title>Overwatch Controller</title>
+
 <style>
   /* Style for collapsible section header */
   .collapsible, .gen-info {
@@ -80,12 +81,13 @@
 <a href="index.html" class="back-button">Back</a> <!-- Back button -->
 
 <h1>Overwatch Controller</h1>
+<h3>Scene will only change when you press submit! Reset button only resets this dock</h3>
 
 <button class="collapsible rajdhani-medium" style="font-size: xx-large;">Casters
   <span class="dropdown-icon">&#9660;</span> <!-- Downward arrow icon -->
 </button>
 <div class="content">
-  <button type="button" onclick="resetForm(this)" class="reset" style="font-size: xx-large;">Reset</button>
+  <button type="button" onclick="resetForm(this)" class="reset" style="font-size: xx-large;">Reset Form</button><br>
   <div class="content" style="display: flex; justify-content: center; align-items: center;">
     <form id="casters" onsubmit="saveData('casters', event)" method="POST">
       <h3>Edit Caster Screen</h3>
@@ -118,7 +120,7 @@
   <span class="dropdown-icon">&#9660;</span> <!-- Downward arrow icon -->
 </button>
 <div class="content">
-  <button type="button" onclick="resetForm(this)" class="reset" style="font-size: xx-large;">Reset</button>
+  <button type="button" onclick="resetForm(this)" class="reset" style="font-size: xx-large;">Reset Form</button><br>
   <button type="button" onclick="swap(this)" class="swap" style="font-size: xx-large;">Swap Sides</button>
   <div class="content" style="display: flex; justify-content: center; align-items: center;">
     <form name="team1info" method="post" onsubmit="saveData('team1info', event)" id="t1">
@@ -152,7 +154,7 @@
   <span class="dropdown-icon">&#9660;</span> <!-- Downward arrow icon -->
 </button>
 <div class="content">
-  <button type="button" onclick="resetForm(this)" class="reset" style="font-size: xx-large;">Reset</button>
+  <button type="button" onclick="resetForm(this)" class="reset" style="font-size: xx-large;">Reset Form</button><br>
   <div class="content" style="display: flex; justify-content: center; align-items: center;">
     <form name="team1" method="post" onsubmit="saveData('team1', event)" id="t1roster">
       <h3>Team 1</h3>
@@ -221,7 +223,7 @@
   <span class="dropdown-icon">&#9660;</span> <!-- Downward arrow icon -->
 </button>
 <div class="content">
-  <button type="button" onclick="resetForm(this)" class="reset" style="font-size: xx-large;">Reset</button><br>
+  <button type="button" onclick="resetForm(this)" class="reset" style="font-size: xx-large;">Reset Form</button><br>
   <h2>Select Format:</h2>
   <div class="content" style="display: flex; justify-content: center; align-items: center;">
     <label for="radio">BO3</label>
@@ -614,9 +616,12 @@ function saveData(formName, event) {
     // Save the input value in local storage with the form ID as the key
     localStorage.setItem(formId + '_' + inputName, input.value);
   });
-
   // Optionally, you can redirect to another page or perform any other action
+
+  
 }
+
+
 </script>
 
 </body>

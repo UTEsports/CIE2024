@@ -57,6 +57,12 @@
     localStorage.setItem('bo3m1winner', 'null');
     localStorage.setItem('bo3m2winner', 'null');
     localStorage.setItem('bo3m3winner', 'null');
+
+    localStorage.setItem('bo5m1winner', 'null');
+    localStorage.setItem('bo5m2winner', 'null');
+    localStorage.setItem('bo5m3winner', 'null');
+    localStorage.setItem('bo5m4winner', 'null');
+    localStorage.setItem('bo5m5winner', 'null');
     
     function convertToFileName(userInput) {
         if (!userInput) {
@@ -144,18 +150,43 @@
     }
 
     function setScore(){
-        var bo3scores = [localStorage.getItem('bo3m1winner'), localStorage.getItem('bo3m2winner'), localStorage.getItem('bo3m3winner')]
+        var format = localStorage.getItem('mapset');
+        if(format == 'bo3'){
+            var bo3scores = [localStorage.getItem('bo3m1winner'), localStorage.getItem('bo3m2winner'), localStorage.getItem('bo3m3winner')]
 
-        var t1Count = bo3scores.filter(function(item) {
-            return item === 't1';
-        }).length
+            var t1Count = bo3scores.filter(function(item) {
+                return item === 't1';
+            }).length
 
-        var t2Count = bo3scores.filter(function(item) {
-            return item === 't2';
-        }).length
+            localStorage.setItem('t1score', t1Count);
 
-        var miniscore = document.getElementById('miniscore');
-        miniscore.innerHTML = t1Count + " - " + t2Count;
+            var t2Count = bo3scores.filter(function(item) {
+                return item === 't2';
+            }).length
+
+            localStorage.setItem('t2score', t2Count);
+
+            var miniscore = document.getElementById('miniscore');
+            miniscore.innerHTML = t1Count + " - " + t2Count;
+        }else{
+            var bo5scores = [localStorage.getItem('bo5m1winner'), localStorage.getItem('bo5m2winner'), localStorage.getItem('bo5m3winner'), localStorage.getItem('bo5m4winner'), localStorage.getItem('bo5m5winner')]
+
+            var t1Count = bo5scores.filter(function(item) {
+                return item === 't1';
+            }).length
+
+            localStorage.setItem('t1score', t1Count);
+
+            var t2Count = bo5scores.filter(function(item) {
+                return item === 't2';
+            }).length
+
+            localStorage.setItem('t2score', t2Count);
+
+            var miniscore = document.getElementById('miniscore');
+            miniscore.innerHTML = t1Count + " - " + t2Count;
+        }
+        
     }
 
     function retrieveMaps(){
@@ -278,6 +309,7 @@
 
     function setDivState(divId, state, scores, map, tile, mapnum) {
         
+        map = map.toUpperCase();
         var div = document.getElementById(divId);
         // Remove any existing state classes
         div.classList.remove('unplayed', 'upnext', 'ipr', 'done-blue', 'done-red', 'done-draw');
@@ -292,6 +324,7 @@
             div.innerHTML = "<br><br><br><br><br><h1>" + map +"</h1><img src=" + icon + ">"
         } else if (state === 'upnext') {
             div.classList.add('upnext');
+            localStorage.setItem(tile + 'winner', 'null');
             div.innerHTML = "<br><br><br><br><h1>UP NEXT</h1><h2>" + map +"</h2><img src=" + icon + ">"
         } else if (state === 'ipr') {
             div.classList.add('ipr');
