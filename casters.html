@@ -16,7 +16,9 @@
     <div id="caster-1-tag" class="caster-1-tag druk-medium-text"></div>
     <div id="caster-2-name" class="caster-2-name druk-medium-text"></div>
     <div id="caster-2-tag" class="caster-2-tag druk-medium-text"></div>
-
+    <div id="caster-streamtitle" class="druk-wide-heavy"></div>
+    <div id="caster-subtitle" class="druk-medium-text"></div>
+    <div id="divider"></div>
     <img class="stacked-image" id="vs-asset" alt="vs">
     <div style="color: white; font-size: 80px; border-radius: 38px; font-weight: 900; position: absolute; top: 890px; left: 1340px; width:259.53px; height: 122px;" id="miniscore" class="druk-wide-heavy"></div>
     
@@ -34,12 +36,15 @@
         var c2name = localStorage.getItem('casters_c2name');
         var c2tag = localStorage.getItem('casters_c2tag');
         var vs = localStorage.getItem('vsImagePath');
+        var title = localStorage.getItem('stream_title');
+        var subtitle = localStorage.getItem('stream_subtitle');
+
+        document.getElementById('caster-subtitle').innerHTML = subtitle;
+        document.getElementById('caster-streamtitle').innerHTML = title;
 
         document.getElementById('t1Logo').src = localStorage.getItem('t1_logo')
         document.getElementById('t2Logo').src = localStorage.getItem('t2_logo');
 
-        var intname = localStorage.getItem('casters_intname');
-        var inttag = localStorage.getItem('casters_inttag');
 
         // Display data
         var c1nDiv = document.getElementById('caster-1-name');

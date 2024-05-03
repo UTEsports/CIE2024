@@ -706,3 +706,69 @@ body {
 h1, h2, h3, h4, h5, h6, p, span, div, a {
   text-transform: uppercase;
 }
+
+#caster-streamtitle{
+  position: absolute;
+  top: 899px;
+  left: 438px;
+  height: 38px;
+  width: 641px;
+  z-index: 2;
+  color: white;
+  overflow: clip;
+  justify-content: center;
+  align-content: center;
+}
+
+#divider{
+  position: absolute;
+  top: 869px;
+  left: 420px;
+  height: 127px;
+  width: 4px;
+  background-color: white;
+  z-index: 3;
+}
+
+#caster-subtitle{
+  position: absolute;
+  height: 38px;
+  width: 157px;
+  top: 942px;
+  left: 680px;
+  z-index: 2;
+  color: white;
+  justify-content: center;
+  align-content: center;
+}
+
+.caster-int{
+  position: absolute;
+  left: 375px;
+  height: 51px;
+  width: 380px;
+  text-align: left;
+  justify-content: center;
+  align-content: center;
+  padding-left: 30px;
+  overflow: clip;
+  z-index: 2;
+  color: white;
+}
+
+#caster-3-name {
+  position: absolute;
+  color:#fff;
+  top: 653px; /* Adjust the top position as needed */
+  left: 1000px; /* Adjust the left position as needed */
+  z-index: 2;
+  font-size: 36px;
+}
+#caster-3-tag {
+  position: absolute;
+  color:#fff;
+  top: 693px; /* Adjust the top position as needed */
+  left: 1000px; /* Adjust the left position as needed */
+  z-index: 2;
+  font-size: 24px;
+}
