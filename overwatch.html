@@ -15,6 +15,7 @@
 
 <style>
   /* Style for collapsible section header */
+
   .collapsible, .gen-info {
     background-color: #3498db;
     color: #f1f1f1;
@@ -55,7 +56,7 @@
 
   /* Adjust form width and margin */
   form {
-    width: 20%; /* Adjust the width as needed */
+    width: 100%; /* Adjust the width as needed */
     margin: 0 auto; /* Center align the form */
   }
 
@@ -74,6 +75,12 @@
     font-family: 'Rajdhani', sans-serif;
     border-radius: 20px;
   }
+
+  .column {
+  flex: 1;
+  margin-right: 20px; /* Adjust margin between columns as needed */
+}
+
 </style>
 </head>
 <body style="background-color: #f1f1f1;">
@@ -82,7 +89,7 @@
 
 <h1>Overwatch Controller</h1>
 <h3>Scene will only change when you press submit! Reset button only resets this dock</h3>
-<form name="stream" method="post" onsubmit="saveData('stream', event)" id="stream">
+<form name="stream" method="post" onsubmit="saveData('stream', event)" id="stream" style="margin-bottom: -50px;">
   Stream title:
   <input type="text" id="title" name="title">
   Subtitle:
@@ -98,30 +105,37 @@
   <div class="content" style="display: flex; justify-content: center; align-items: center;">
     <form id="casters" onsubmit="saveData('casters', event)" method="POST">
       <h3>Edit Caster Screen</h3>
-      <label for="c1name">Caster 1 Name:</label><br>
-      <input type="text" id="c1name" name="c1name"><br>
-      <label for="c1tag">Caster 1 Tag:</label><br>
-      <input type="text" id="c1tag" name="c1tag"><br>
-
-      <label for="c2name">Caster 2 Name:</label><br>
-      <input type="text" id="c2name" name="c2name"><br>
-      <label for="c2tag">Caster 2 Tag:</label><br>
-      <input type="text" id="c2tag" name="c2tag"><br>
+      <div class="content" style="display: flex; justify-content: center; align-items: center;">
+        <div class="column">
+          Caster 1 Name:<br>
+          <input type="text" id="c1name" name="c1name"><br>
+          Caster 1 Tag:<br>
+          <input type="text" id="c1tag" name="c1tag"><br>
+        </div>
+        <div class="column">
+          Caster 2 Name:<br>
+          <input type="text" id="c2name" name="c2name"><br>
+          Caster 2 Tag:<br>
+          <input type="text" id="c2tag" name="c2tag"><br>
+        </div>
+        <div class="column">
+          Interviewee Name:<br>
+          <input type="text" id="intname" name="intname"><br>
+          Interviewee Tag:<br>
+          <input type="text" id="inttag" name="inttag"><br>
+          
+        </div>VS Screen Selection:
+        <select id="vs-choice" class="big-dropdown">
+          <option value="choice1">With Score</option>
+          <option value="choice2">No Score</option>
+        </select><br>
+      </div>
       
-      <label for="intname">Interviewee Name (for interview screen):</label><br>
-      <input type="text" id="intname" name="intname"><br>
-      <label for="inttag">Interviewee Tag:</label><br>
-      <input type="text" id="inttag" name="inttag"><br>
-
-      <label for="vs" id="vs" name="vs">VS Screen Selection:</label>
-      <select id="vs-choice" class="big-dropdown">
-        <option value="choice1">With Score</option>
-        <option value="choice2">No Score</option>
-    </select><br>
       <button type="submit">Submit</button>
     </form>
   </div>
 </div>
+
 
 <button class="collapsible rajdhani-medium" style="font-size: xx-large;">Match Information
   <span class="dropdown-icon">&#9660;</span> <!-- Downward arrow icon -->

@@ -121,7 +121,6 @@ body {
   input, select {
     height: 35px;
     width: 150px;
-    margin-bottom: 10px;
     border: 2px solid #ccc;
     border-radius: 5px;
   }
@@ -505,6 +504,7 @@ select{
   font-weight: 500;
   font-style: normal;
   font-size: 25px;
+  height: 60px;
 }
 
 .select2-selection__rendered {
@@ -643,12 +643,14 @@ form{
   display: flex;
   flex-direction: row;
   height: 23px;
-  width: 515px;
+  width: 485px;
   left: 1353px;
   top: 10.5px;
   justify-content: space-between;
   align-items: center;
   line-height: 1;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .map-off{
@@ -771,4 +773,19 @@ h1, h2, h3, h4, h5, h6, p, span, div, a {
   left: 1000px; /* Adjust the left position as needed */
   z-index: 2;
   font-size: 24px;
+}
+
+#overlay-title{
+  width: 494px;
+  height: 23px;
+  position: absolute;
+  top: 11px;
+  left: 43px;
+  color: white;
+  font-size: 10px;
+  justify-content: center;
+  align-content: center;
+  text-align: left;
+  padding-left: 15px;
+  padding-right: 15px;
 }
