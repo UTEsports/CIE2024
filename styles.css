@@ -313,7 +313,7 @@ body {
   cursor: pointer;
 }
 
-#bo3m1display, #bo3m1state {
+#bo3m1display, #bo3m1state, #valbo3m1display, #valbo3m1state {
   border-radius: 30px;
   position: absolute;
   top: 292px;
@@ -322,7 +322,7 @@ body {
   height: 701px;
 }
 
-#bo3m2display, #bo3m2state {
+#bo3m2display, #bo3m2state, #valbo3m2display, #valbo3m2state  {
   border-radius: 30px;
   position: absolute;
   top: 292px;
@@ -331,7 +331,7 @@ body {
   height: 701px;
 }
 
-#bo3m3display, #bo3m3state {
+#bo3m3display, #bo3m3state, #valbo3m3display, #valbo3m3state  {
   border-radius: 30px;
   position: absolute;
   top: 292px;
@@ -340,7 +340,7 @@ body {
   height: 701px;
 }
 
-#bo5m1display, #bo5m1state {
+#bo5m1display, #bo5m1state, #valbo5m1display, #valbo5m1state  {
   border-radius: 30px;
   position: absolute;
   top: 292px;
@@ -349,7 +349,7 @@ body {
   height: 701px;
 }
 
-#bo5m2display, #bo5m2state {
+#bo5m2display, #bo5m2state, #valbo5m2display, #valbo5m2state {
   border-radius: 30px;
   position: absolute;
   top: 292px;
@@ -358,7 +358,7 @@ body {
   height: 701px;
 }
 
-#bo5m3display, #bo5m3state {
+#bo5m3display, #bo5m3state, #valbo5m3display, #valbo5m3state  {
   border-radius: 30px;
   position: absolute;
   top: 292px;
@@ -367,7 +367,7 @@ body {
   height: 701px;
 }
 
-#bo5m4display, #bo5m4state {
+#bo5m4display, #bo5m4state, #valbo5m4display, #valbo5m4state {
   border-radius: 30px;
   position: absolute;
   top: 292px;
@@ -376,7 +376,7 @@ body {
   height: 701px;
 }
 
-#bo5m5display, #bo5m5state {
+#bo5m5display, #bo5m5state, #valbo5m5display, #valbo5m5state  {
   border-radius: 30px;
   position: absolute;
   top: 292px;
