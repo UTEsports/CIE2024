@@ -787,3 +787,37 @@ h1, h2, h3, h4, h5, h6, p, span, div, a {
   padding-left: 15px;
   padding-right: 15px;
 }
+
+.panel_label{
+  position: absolute;
+  height: 46px;
+  width: 383px;
+  color: white;
+  z-index: 3;
+  overflow: clip;
+  justify-content: center;
+  align-content: center;
+}
+
+.panel-streamtitle{
+  position: absolute;
+  height: 124px;
+  width: 1287px;
+  left: 560px;
+  top: 791px;
+  z-index: 3;
+  color: white;
+  justify-content: center;
+  align-content: center;
+}
+
+.panel_label5{
+  position: absolute;
+  height: 37px;
+  width: 341px;
+  color: white;
+  z-index: 3;
+  justify-content: center;
+  align-content: center;
+  overflow: clip;
+}
