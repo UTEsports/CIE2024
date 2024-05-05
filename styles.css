@@ -862,3 +862,46 @@ h1, h2, h3, h4, h5, h6, p, span, div, a {
   top:51px;
   left:1480px;
 }
+
+#p1, #p7{
+  top:92px;
+  left:885px;
+  transform: skew(45deg);
+}
+#p2, #p8{
+  top:103px;
+  left:896px;
+  transform: skew(45deg);
+}
+#p3{
+  top:114px;
+  left:907px;
+  transform: skew(45deg);
+}
+#p4, #p9{
+  top:92px;
+  right:885px;
+  transform: skew(-45deg);
+}
+#p5, #p10{
+  top:103px;
+  right:896px;
+  transform: skew(-45deg);
+}
+#p6{
+  top:114px;
+  right:907px;
+  transform: skew(-45deg);
+}
+
+.val_p{
+  position: absolute;
+  width: 14.5px;
+  height: 9.5px;
+  background-color: black;
+}
+
+#p7, #p8, #p9, #p10{
+  height: 15px;
+  width: 20px;
+}
