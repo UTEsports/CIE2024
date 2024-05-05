@@ -16,23 +16,23 @@
         <div class="druk-wide-bold" id="valoverlay-name-2" style="position: absolute; font-size: 16px;  z-index: 2; width: 290px; height: 24px; top:95px; right: 581px; align-content: center; overflow: clip; white-space: nowrap;"></div>
         <img class="stacked-image" src="assets\ingame_valo_main.png" style="z-index: 0;">
         <div id="val-bo5" style="display: none;">
-            <div id="p1" class="val_p"></div>
-            <div id="p2" class="val_p"></div>
-            <div id="p3" class="val_p"></div>
+            <div id="p_1" class="val_p"></div>
+            <div id="p_2" class="val_p"></div>
+            <div id="p_3" class="val_p"></div>
 
-            <div id="p4" class="val_p"></div>
-            <div id="p5" class="val_p"></div>
-            <div id="p6" class="val_p"></div>
+            <div id="p_4" class="val_p"></div>
+            <div id="p_5" class="val_p"></div>
+            <div id="p_6" class="val_p"></div>
         </div>
 
         <div id="val-bo3">
-            <div id="p7" class="val_p" style="left: 890px;"></div>
+            <div id="p_7" class="val_p" style="left: 890px;"></div>
 
-            <div id="p8" class="val_p" style="top: 110px; left: 908px;"></div>
+            <div id="p_8" class="val_p" style="top: 110px; left: 908px;"></div>
 
-            <div id="p9" class="val_p" style="right: 890px;"></div>
+            <div id="p_9" class="val_p" style="right: 890px;"></div>
     
-            <div id="p10" class="val_p" style="top: 110px; right: 908px;"></div>
+            <div id="p_10" class="val_p" style="top: 110px; right: 908px;"></div>
         </div>
     </div>
 
@@ -40,6 +40,17 @@
     retrieveInfo();
     // Retrieve form data from localStorage
     function retrieveInfo(){
+        localStorage.setItem('valbo1m1winner', 'null');
+        localStorage.setItem('valbo3m1winner', 'null');
+        localStorage.setItem('valbo3m2winner', 'null');
+        localStorage.setItem('valbo3m3winner', 'null');
+
+        localStorage.setItem('valbo5m1winner', 'null');
+        localStorage.setItem('valbo5m2winner', 'null');
+        localStorage.setItem('valbo5m3winner', 'null');
+        localStorage.setItem('valbo5m4winner', 'null');
+        localStorage.setItem('valbo5m5winner', 'null');
+
         var t1name = localStorage.getItem('valt1_name');
         var name1 = document.getElementById('valoverlay-name-1');
         name1.innerHTML = t1name;
@@ -66,70 +77,73 @@
             document.getElementById('val-bo5').style.display = "none";
             if(t1score == '1'){
                 console.log(t1score);
-                document.getElementById('p7').style.backgroundColor = "#fff";
+                document.getElementById('p_7').style.backgroundColor = "#fff";
             }else if(t1score == '2'){
-                document.getElementById('p7').style.backgroundColor = "#fff";
-                document.getElementById('p8').style.backgroundColor = "#fff";
+                document.getElementById('p_7').style.backgroundColor = "#fff";
+                document.getElementById('p_8').style.backgroundColor = "#fff";
             }else{
-                document.getElementById('p7').style.backgroundColor = "black";
-                document.getElementById('p8').style.backgroundColor = "black";
+                document.getElementById('p_7').style.backgroundColor = "black";
+                document.getElementById('p_8').style.backgroundColor = "black";
             }
             
             if(t2score == '1'){
-                document.getElementById('p9').style.backgroundColor = "#fff";
+                document.getElementById('p_9').style.backgroundColor = "#fff";
             }else if(t2score == '2'){
-                document.getElementById('p9').style.backgroundColor = "#fff";
-                document.getElementById('p10').style.backgroundColor = "#fff";
+                document.getElementById('p_9').style.backgroundColor = "#fff";
+                document.getElementById('p_10').style.backgroundColor = "#fff";
             }else{
-                document.getElementById('p9').style.backgroundColor = "black";
-                document.getElementById('p10').style.backgroundColor = "black";
+                document.getElementById('p_9').style.backgroundColor = "black";
+                document.getElementById('p_10').style.backgroundColor = "black";
             }
         } else if(format == 'bo5'){
             document.getElementById('val-bo5').style.display = "";
             document.getElementById('val-bo3').style.display = "none";
             if(t1score == '1'){
-                document.getElementById('p1').style.backgroundColor = "#fff";
+                document.getElementById('p_1').style.backgroundColor = "#fff";
             }else if(t1score == '2'){
-                document.getElementById('p1').style.backgroundColor = "#fff";
-                document.getElementById('p2').style.backgroundColor = "#fff";
+                document.getElementById('p_1').style.backgroundColor = "#fff";
+                document.getElementById('p_2').style.backgroundColor = "#fff";
             }else if(t1score == '3'){
-                document.getElementById('p1').style.backgroundColor = "#fff";
-                document.getElementById('p2').style.backgroundColor = "#fff";
-                document.getElementById('p3').style.backgroundColor = "#fff";
+                document.getElementById('p_1').style.backgroundColor = "#fff";
+                document.getElementById('p_2').style.backgroundColor = "#fff";
+                document.getElementById('p_3').style.backgroundColor = "#fff";
             }else{
-                document.getElementById('p1').style.backgroundColor = "black";
-                document.getElementById('p2').style.backgroundColor = "black";
-                document.getElementById('p3').style.backgroundColor = "black";
+                document.getElementById('p_1').style.backgroundColor = "black";
+                document.getElementById('p_2').style.backgroundColor = "black";
+                document.getElementById('p_3').style.backgroundColor = "black";
             }
             
             if(t2score == '1'){
-                document.getElementById('p4').style.backgroundColor = "#fff";
+                document.getElementById('p_4').style.backgroundColor = "#fff";
             }else if(t2score == '2'){
-                document.getElementById('p4').style.backgroundColor = "#fff";
-                document.getElementById('p5').style.backgroundColor = "#fff";
+                document.getElementById('p_4').style.backgroundColor = "#fff";
+                document.getElementById('p_5').style.backgroundColor = "#fff";
             }else if(t2score == '3'){
-                document.getElementById('p4').style.backgroundColor = "#fff";
-                document.getElementById('p5').style.backgroundColor = "#fff";
-                document.getElementById('p6').style.backgroundColor = "#fff";
+                document.getElementById('p_4').style.backgroundColor = "#fff";
+                document.getElementById('p_5').style.backgroundColor = "#fff";
+                document.getElementById('p_6').style.backgroundColor = "#fff";
             }else{
-                document.getElementById('p4').style.backgroundColor = "black";
-                document.getElementById('p5').style.backgroundColor = "black";
-                document.getElementById('p6').style.backgroundColor = "black";
+                document.getElementById('p_4').style.backgroundColor = "black";
+                document.getElementById('p_5').style.backgroundColor = "black";
+                document.getElementById('p_6').style.backgroundColor = "black";
             }
+        } else{
+            document.getElementById('val-bo5').style.display = "none";
+            document.getElementById('val-bo3').style.display = "none";
         }
     }
 
     
     function test(){
-        setDivState(localStorage.getItem('valbo1m1_state'),'bo1m1', 'map1');
-        setDivState(localStorage.getItem('valbo3m1_state'),'bo3m1', 'map1');
-        setDivState(localStorage.getItem('valbo3m2_state'),'bo3m2', 'map2');
-        setDivState(localStorage.getItem('valbo3m3_state'),'bo3m3', 'map3');
-        setDivState(localStorage.getItem('valbo5m1_state'),'bo5m1', 'map1');
-        setDivState(localStorage.getItem('valbo5m2_state'),'bo5m2', 'map2');
-        setDivState(localStorage.getItem('valbo5m3_state'),'bo5m3', 'map3');
-        setDivState(localStorage.getItem('valbo5m4_state'),'bo5m4', 'map4');
-        setDivState(localStorage.getItem('valbo5m5_state'),'bo5m5', 'map5');
+        setDivState(localStorage.getItem('valbo1m1_state'),'valbo1m1', 'map1');
+        setDivState(localStorage.getItem('valbo3m1_state'),'valbo3m1', 'map1');
+        setDivState(localStorage.getItem('valbo3m2_state'),'valbo3m2', 'map2');
+        setDivState(localStorage.getItem('valbo3m3_state'),'valbo3m3', 'map3');
+        setDivState(localStorage.getItem('valbo5m1_state'),'valbo5m1', 'map1');
+        setDivState(localStorage.getItem('valbo5m2_state'),'valbo5m2', 'map2');
+        setDivState(localStorage.getItem('valbo5m3_state'),'valbo5m3', 'map3');
+        setDivState(localStorage.getItem('valbo5m4_state'),'valbo5m4', 'map4');
+        setDivState(localStorage.getItem('valbo5m5_state'),'valbo5m5', 'map5');
     }
 
     function setDivState(state, tile, mapnum) {
