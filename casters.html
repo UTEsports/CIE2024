@@ -73,6 +73,17 @@
             document.getElementById('miniscore').style.display = '';
         }
 
+        var game = localStorage.getItem('casters_game-scores');
+        if(game == 'ow'){
+            setOWScore();
+        }else if(game == 'val'){
+            setValScore();
+        }else if(game == 'lol'){
+            setLeagueScore();
+        }else if(game == 'cod'){
+            setCoDScore();
+        }
+
       }
         
 
@@ -85,7 +96,20 @@
         setDivState(localStorage.getItem('bo5m3_state'),'bo5m3', 'map3');
         setDivState(localStorage.getItem('bo5m4_state'),'bo5m4', 'map4');
         setDivState(localStorage.getItem('bo5m5_state'),'bo5m5', 'map5');
-        setScore();
+        setScore(localStorage.getItem('mapset'));
+    }
+
+    function valtest(){
+        setDivState(localStorage.getItem('valbo1m1_state'),'valbo1m1', 'map1');
+        setDivState(localStorage.getItem('valbo3m1_state'),'valbo3m1', 'map1');
+        setDivState(localStorage.getItem('valbo3m2_state'),'valbo3m2', 'map2');
+        setDivState(localStorage.getItem('valbo3m3_state'),'valbo3m3', 'map3');
+        setDivState(localStorage.getItem('valbo5m1_state'),'valbo5m1', 'map1');
+        setDivState(localStorage.getItem('valbo5m2_state'),'valbo5m2', 'map2');
+        setDivState(localStorage.getItem('valbo5m3_state'),'valbo5m3', 'map3');
+        setDivState(localStorage.getItem('valbo5m4_state'),'valbo5m4', 'map4');
+        setDivState(localStorage.getItem('valbo5m5_state'),'valbo5m5', 'map5');
+        setValScore();
     }
 
     function setDivState(state, tile, mapnum) {
@@ -111,8 +135,73 @@
         }
         
     }
+
+    function setValScore(){
+        var format = localStorage.getItem('valmapset');
+        if(format == 'bo3'){
+            var bo3scores = [localStorage.getItem('valbo3m1winner'), localStorage.getItem('valbo3m2winner'), localStorage.getItem('valbo3m3winner')]
+
+            var t1Count = bo3scores.filter(function(item) {
+                return item === 't1';
+            }).length
+
+            localStorage.setItem('valt1score', t1Count);
+
+
+
+            var t2Count = bo3scores.filter(function(item) {
+                return item === 't2';
+            }).length
+
+            localStorage.setItem('valt2score', t2Count);
+
+
+            var miniscore = document.getElementById('miniscore');
+            miniscore.innerHTML = t1Count + " - " + t2Count;
+        }else if(format == 'bo5'){
+            var bo5scores = [localStorage.getItem('valbo5m1winner'), localStorage.getItem('valbo5m2winner'), localStorage.getItem('valbo5m3winner'), localStorage.getItem('valbo5m4winner'), localStorage.getItem('valbo5m5winner')]
+
+            var t1Count = bo5scores.filter(function(item) {
+                return item === 't1';
+            }).length
+
+            localStorage.setItem('valt1score', t1Count);
+
+
+            var t2Count = bo5scores.filter(function(item) {
+                return item === 't2';
+            }).length
+
+            localStorage.setItem('valt2score', t2Count);
+
+
+
+            var miniscore = document.getElementById('miniscore');
+            miniscore.innerHTML = t1Count + " - " + t2Count;
+        }else if(format == 'bo1'){
+            var bo5scores = [localStorage.getItem('valbo1m1winner')]
+
+            var t1Count = bo5scores.filter(function(item) {
+                return item === 't1';
+            }).length
+
+            localStorage.setItem('valt1score', t1Count);
+
+            
+            var t2Count = bo5scores.filter(function(item) {
+                return item === 't2';
+            }).length
+
+            localStorage.setItem('valt2score', t2Count);
+
+            var miniscore = document.getElementById('miniscore');
+            miniscore.innerHTML = t1Count + " - " + t2Count;
+        }
+        
+        
+    }
     
-    function setScore(){ 
+    function setScore(format){ 
         var format = localStorage.getItem('mapset');
         if(format == 'bo3'){
             var bo3scores = [localStorage.getItem('bo3m1winner'), localStorage.getItem('bo3m2winner'), localStorage.getItem('bo3m3winner')]
@@ -128,7 +217,7 @@
             }).length
 
             localStorage.setItem('t2score', t2Count);
-        }else{
+        }else if (format == 'bo5'){
             var bo5scores = [localStorage.getItem('bo5m1winner'), localStorage.getItem('bo5m2winner'), localStorage.getItem('bo5m3winner'), localStorage.getItem('bo5m4winner'), localStorage.getItem('bo5m5winner')]
 
             var t1Count = bo5scores.filter(function(item) {
@@ -142,14 +231,41 @@
             }).length
 
             localStorage.setItem('t2score', t2Count);
+        }else{
+            var bo1scores = [localStorage.getItem('bo1m1winner')]
+
+            var t1Count = bo1scores.filter(function(item) {
+                return item === 't1';
+            }).length
+
+            localStorage.setItem('t1score', t1Count);
+
+            var t2Count = bo1scores.filter(function(item) {
+                return item === 't2';
+            }).length
+
+            localStorage.setItem('t2score', t2Count);
         }
         var miniscore = document.getElementById('miniscore');
         miniscore.innerHTML = t1Count + " - " + t2Count;
     }
+    function setOWScore(){
+        test();
+    }
 
+    function setLeagueScore(){
+        miniscore.innerHTML = localStorage.getItem('t1_score')  + " - " + localStorage.getItem('t2_score');
+    }
+
+    function setValScore(){
+        valtest();
+    }
+
+    function setCoDScore(){
+        miniscore.innerHTML = localStorage.getItem('t1cod_score') + ' - ' + localStorage.getItem('t2cod_score');
+    }
     setInterval(function(){
         getCasters();
-        test();
     }, 1 * 1000)
 
 

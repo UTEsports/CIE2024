@@ -92,11 +92,14 @@
 
             localStorage.setItem('valt1score', t1Count);
 
+
+
             var t2Count = bo3scores.filter(function(item) {
                 return item === 't2';
             }).length
 
             localStorage.setItem('valt2score', t2Count);
+
 
             var miniscore = document.getElementById('miniscore');
             miniscore.innerHTML = t1Count + " - " + t2Count;
@@ -109,11 +112,14 @@
 
             localStorage.setItem('valt1score', t1Count);
 
+
             var t2Count = bo5scores.filter(function(item) {
                 return item === 't2';
             }).length
 
             localStorage.setItem('valt2score', t2Count);
+
+
 
             var miniscore = document.getElementById('miniscore');
             miniscore.innerHTML = t1Count + " - " + t2Count;
@@ -126,6 +132,7 @@
 
             localStorage.setItem('valt1score', t1Count);
 
+            
             var t2Count = bo5scores.filter(function(item) {
                 return item === 't2';
             }).length
@@ -240,14 +247,14 @@
             div.innerHTML = "<br><h1 style=\"font-size: 80px; margin-top:210px;\">" + scores + "</h1><h2 style=\"margin-top: -25px\">" + map +"</h2><img src=" + ">";
         } else if (state == 'done'){
             if(parseInt(localStorage.getItem(tile + '_team1_' + mapnum + '_score')) > parseInt(localStorage.getItem(tile + '_team2_' + mapnum + '_score'))){
-                var winner = localStorage.getItem('valt1_logo')
+                var winner = localStorage.getItem('t1_logo')
                 div.innerHTML = "<br><img class=\"winner-logo\" style=\"width: 170px; height: 170px; margin-bottom: -20px;\" team=\"t1\" src=\""+ winner +"\"><h1 style=\"margin-bottom: -8px; font-size:80px;\">" + scores + "</h1><h2>" + map +"</h2><img src=" + ">";
                 div.classList.add('done-blue');
                 localStorage.setItem(tile + 'winner', 't1');
                 
             }
             else{
-                var winner = localStorage.getItem('valt2_logo')
+                var winner = localStorage.getItem('t2_logo')
                 console.log(winner);
                 div.innerHTML = "<br><img class=\"winner-logo\" style=\"width: 170px; height: 170px; margin-bottom: -20px;\" team=\"t2\" src=\""+ winner +"\"><h1 style=\"margin-bottom: -8px; font-size:80px;\">" + scores + "</h1><h2>" + map +"</h2><img src=" + ">";
                 div.classList.add('done-red');
