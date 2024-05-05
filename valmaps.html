@@ -15,6 +15,11 @@
         <img id="logo1" style="height:136px; width:136px;"></img>
         <img id="logo2" style="height:136px; width:136px;"></img>
     </div>
+
+    <div class="druk-medium-text bo1">
+        <img id="valbo1m1display" onerror="this.style.opacity='0'">
+        <div id="valbo1m1state"></div>
+    </div>
     
     <div class="druk-medium-text bo3">
         <img id="valbo3m1display" onerror="this.style.opacity='0'">
@@ -50,7 +55,9 @@
     </div>
 
   <script>
-    retrieveMaps();    
+    retrieveMaps();
+    localStorage.setItem('valbo1m1winner', 'null');
+
     localStorage.setItem('valbo3m1winner', 'null');
     localStorage.setItem('valbo3m2winner', 'null');
     localStorage.setItem('valbo3m3winner', 'null');
@@ -94,8 +101,25 @@
 
             var miniscore = document.getElementById('miniscore');
             miniscore.innerHTML = t1Count + " - " + t2Count;
-        }else{
+        }else if(format == 'bo5'){
             var bo5scores = [localStorage.getItem('valbo5m1winner'), localStorage.getItem('valbo5m2winner'), localStorage.getItem('valbo5m3winner'), localStorage.getItem('valbo5m4winner'), localStorage.getItem('valbo5m5winner')]
+
+            var t1Count = bo5scores.filter(function(item) {
+                return item === 't1';
+            }).length
+
+            localStorage.setItem('t1score', t1Count);
+
+            var t2Count = bo5scores.filter(function(item) {
+                return item === 't2';
+            }).length
+
+            localStorage.setItem('t2score', t2Count);
+
+            var miniscore = document.getElementById('miniscore');
+            miniscore.innerHTML = t1Count + " - " + t2Count;
+        }else if(format == 'bo1'){
+            var bo5scores = [localStorage.getItem('valbo1m1winner')]
 
             var t1Count = bo5scores.filter(function(item) {
                 return item === 't1';
@@ -113,6 +137,7 @@
             miniscore.innerHTML = t1Count + " - " + t2Count;
         }
         
+        
     }
 
     function retrieveMaps(){
@@ -128,11 +153,15 @@
         mapset.src="assets\\maps\\map_" + format + "_box.png";
         var bo3Divs = document.querySelectorAll('.bo3');
         var bo5Divs = document.querySelectorAll('.bo5');
+        var bo1Divs = document.querySelectorAll('.bo1');
         if (format === 'bo3') {
             bo3Divs.forEach(function(div) {
                 div.style.display = 'block';
             });
             bo5Divs.forEach(function(div) {
+                div.style.display = 'none';
+            });
+            bo1Divs.forEach(function(div) {
                 div.style.display = 'none';
             });
             for (let i = 1; i <= 3; i++) {
@@ -154,6 +183,9 @@
             bo5Divs.forEach(function(div) {
                 div.style.display = 'block';
             });
+            bo1Divs.forEach(function(div) {
+                div.style.display = 'none';
+            });
             for (let i = 1; i <= 5; i++) {
             const mapNumber = 'valbo5m' + i;
             const mapState = localStorage.getItem(mapNumber + '_state');
@@ -164,7 +196,26 @@
             const mapStateDiv = document.getElementById(mapNumber + 'state');
             const mapScores = localStorage.getItem(mapNumber + '_team1_map' + i + '_score') + "-" + localStorage.getItem(mapNumber + '_team2_map' + i + '_score');
             setDivState(mapNumber + 'state', mapState, mapScores, map.toUpperCase(), mapNumber, 'map' + i);
-        }
+            }
+        }else if (format == 'bo1'){
+            bo3Divs.forEach(function(div) {
+                div.style.display = 'none';
+            });
+            bo5Divs.forEach(function(div) {
+                div.style.display = 'none';
+            });
+            bo1Divs.forEach(function(div){
+                div.style.display = 'block';
+            });
+            const mapNumber = 'valbo1m1';
+            const mapState = localStorage.getItem(mapNumber + '_state');
+            const map = localStorage.getItem(mapNumber + '_map1' + '_bo1');
+            const mapPath = "assets\\val_maps\\map_tile_valo_bo1_" + convertToFileName(map) + ".png";
+            const mapDisplay = document.getElementById(mapNumber + 'display');
+            mapDisplay.src = mapPath;
+            const mapStateDiv = document.getElementById(mapNumber + 'state');
+            const mapScores = localStorage.getItem(mapNumber + '_team1_map1' + '_score') + "-" + localStorage.getItem(mapNumber + '_team2_map1' + '_score');
+            setDivState(mapNumber + 'state', mapState, mapScores, map.toUpperCase(), mapNumber, 'map1');
         }
 
     }

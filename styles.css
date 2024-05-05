@@ -313,6 +313,14 @@ body {
   cursor: pointer;
 }
 
+#valbo1m1display, #valbo1m1state{
+  position: absolute;
+  height: 701px;
+  width: 1262px;
+  top: 292px;
+  left: 329px;
+}
+
 #bo3m1display, #bo3m1state, #valbo3m1display, #valbo3m1state {
   border-radius: 30px;
   position: absolute;
