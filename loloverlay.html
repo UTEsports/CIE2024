@@ -37,9 +37,11 @@
             height: 77px;
             top: 0px;
             left: 274px;
-            align-content: center;
             overflow-wrap: anywhere;
-          "
+            display: flex;
+            align-items: center;
+            justify-content: center;
+              "
         ></div>
         <div
           class="druk-wide-heavy"
@@ -51,8 +53,11 @@
             height: 77px;
             top: 0px;
             right: 256px;
-            align-content: center;
+            text-align: center;
             overflow-wrap: anywhere;
+            display: flex;
+            align-items: center;
+            justify-content: center;
           "
         ></div>
         <div
@@ -110,11 +115,11 @@
         function retrieveInfo() {
           var t1name = localStorage.getItem("t1_name");
           var name1 = document.getElementById("overlay-name-1");
-          name1.innerHTML = t1name;
+          name1.innerHTML = "<p>" + t1name + "</p>";
 
           var t2name = localStorage.getItem("t2_name");
           var name2 = document.getElementById("overlay-name-2");
-          name2.innerHTML = t2name;
+          name2.innerHTML = "<p>" + t2name + "</p>";
 
           var t1logo = localStorage.getItem("t1_logo");
           var logo1 = document.getElementById("overlay-logo-1");
