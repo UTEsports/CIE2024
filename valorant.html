@@ -159,7 +159,7 @@
   <button type="button" onclick="resetForm(this)" class="reset" style="font-size: xx-large;">Reset Form</button><br>
   <button type="button" onclick="swap(this)" class="swap" style="font-size: xx-large;">Swap Sides</button>
   <div class="content" style="display: flex; justify-content: center; align-items: center;">
-    <form name="valt1" method="post" onsubmit="saveData('valt1', event)" id="valt1">
+    <form name="valt1" method="post" onsubmit="saveData('valt1', event)" id="t1">
       <h3>Team 1</h3>
       <div class="team-info">
         Team 1 Name (10 characters max for styling):<br>
@@ -171,15 +171,15 @@
       </div><br>
       <input type="submit" value="Submit">
     </form>
-    <form name="valt2" method="post" onsubmit="saveData('valt2', event)" id="valt2">
+    <form name="valt2" method="post" onsubmit="saveData('valt2', event)" id="t2">
       <h3>Team 2</h3>
       <div class="team-info">
         Team 2 Name (10 characters max for styling):<br>
-        <input type="text" id="t1_name" name="name">
+        <input type="text" id="t2_name" name="name">
       </div><br>
       <div class="team-info">
         Team 2 Logo (image link):<br>
-        <input type="text" id="t2_name" name="logo">
+        <input type="text" id="t2_logo" name="logo">
       </div><br>
       <input type="submit" value="Submit">
     </form>
