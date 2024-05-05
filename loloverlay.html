@@ -45,25 +45,25 @@
     retrieveInfo();
     // Retrieve form data from localStorage
     function retrieveInfo(){
-        var t1name = localStorage.getItem('t1lol_name');
+        var t1name = localStorage.getItem('t1_name');
         var name1 = document.getElementById('overlay-name-1');
         name1.innerHTML = t1name;
 
-        var t2name = localStorage.getItem('t2lol_name');
+        var t2name = localStorage.getItem('t2_name');
         var name2 = document.getElementById('overlay-name-2');
         name2.innerHTML = t2name;
 
-        var t1logo = localStorage.getItem('t1lol_logo');
+        var t1logo = localStorage.getItem('t1_logo');
         var logo1 = document.getElementById('overlay-logo-1');
         logo1.src = t1logo;
 
-        var t2logo = localStorage.getItem('t2lol_logo');
+        var t2logo = localStorage.getItem('t2_logo');
         var logo2 = document.getElementById('overlay-logo-2');
         logo2.src = t2logo;
 
    
-        var t1score = localStorage.getItem('t1lol_score');
-        var t2score = localStorage.getItem('t2lol_score');
+        var t1score = localStorage.getItem('t1_score');
+        var t2score = localStorage.getItem('t2_score');
         var format = localStorage.getItem('format_lol');
 
         if(format == 'BO3'){
