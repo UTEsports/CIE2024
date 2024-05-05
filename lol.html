@@ -155,14 +155,14 @@
 <button class="collapsible rajdhani-medium" style="font-size: xx-large;">Match Information
   <span class="dropdown-icon">&#9660;</span> <!-- Downward arrow icon -->
 </button>
-<div class="content">
+<div class="content"><br>
   <button type="button" onclick="resetForm(this)" class="reset" style="font-size: xx-large;">Reset Form</button><br>
   <button type="button" onclick="swap(this)" class="swap" style="font-size: xx-large;">Swap Sides</button>
   <div class="content" style="display: flex; justify-content: center; align-items: center;">
     <form name="team1info" method="post" onsubmit="saveData('team1info', event)" id="t1lol">
       <h3>Team 1</h3>
       <div class="team-info">
-        Team 1 Name (10 characters max for styling):<br>
+        Team 1 Name (8 characters max per word for styling):<br>
         <input type="text" id="t1_name" name="name">
       </div><br>
       <div class="team-info">
@@ -178,7 +178,7 @@
     <form name="team2info" method="post" onsubmit="saveData('team2info', event)" id="t2lol">
       <h3>Team 2</h3>
       <div class="team-info">
-        Team 2 Name (10 characters max for styling):<br>
+        Team 2 Name (8 characters max per word for styling):<br>
         <input type="text" id="t1_name" name="name">
       </div><br>
       <div class="team-info">
@@ -192,6 +192,15 @@
       <input type="submit" value="Submit">
     </form>
   </div>
+  <form id="format" onsubmit="saveData('format', event)" method="POST">
+    Format:
+    <select id="vs-choice" class="big-dropdown" name="lol">
+      <option value="BO1">BO1</option>
+      <option value="BO3">BO3</option>
+      <option value="BO5">BO5</option>
+    </select>
+    <input type="submit" value="Submit">
+  </form>
 </div>
 
 <button class="collapsible rajdhani-medium" style="font-size: xx-large;">Roster Information

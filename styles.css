@@ -821,3 +821,36 @@ h1, h2, h3, h4, h5, h6, p, span, div, a {
   align-content: center;
   overflow: clip;
 }
+
+.lol_square{
+  position: absolute;
+  height: 19px;
+  width: 18px;
+  z-index: 3;
+  background-color: black;
+}
+
+#s1, #s7{
+  top:7px;
+  left:440px;
+}
+#s2, #s8{
+  top:29px;
+  left:440px;
+}
+#s3{
+  top:51px;
+  left:440px;
+}
+#s4, #s9{
+  top:7px;
+  left:1480px;
+}
+#s5, #s10{
+  top:29px;
+  left:1480px;
+}
+#s6{
+  top:51px;
+  left:1480px;
+}
