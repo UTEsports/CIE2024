@@ -112,6 +112,149 @@
   <input type="submit" value="Submit">
 </form>
 
+<button class="collapsible rajdhani-medium" style="font-size: xx-large">
+  Break Screen <span class="dropdown-icon">&#9660;</span>
+  <!-- Downward arrow icon -->
+</button>
+<div class="content">
+  <button
+    type="button"
+    onclick="resetForm(this)"
+    class="reset"
+    style="font-size: xx-large"
+  >
+    Reset Form</button
+  ><br />
+  <div
+    class="content"
+    style="display: flex; justify-content: center; align-items: center"
+  >
+    <form name="b1" method="post" onsubmit="saveData('b1', event)" id="b1">
+      <h3>Game 1</h3>
+      <div class="team-info">
+        Team 1 Info:<br />
+        <input type="text" id="t1_name" name="name" placeholder="Name" />
+        <input type="text" id="t1_logo" name="logo" placeholder="Logo" />
+      </div>
+      <br />
+      <div class="team-info">
+        Team 2 Name:<br />
+        <input type="text" id="t2_name" name="name" placeholder="Name" />
+        <input type="text" id="t2_logo" name="logo" placeholder="Logo" />
+      </div>
+      <br />
+      Format:
+      <select id="format" class="big-dropdown" name="format">
+        <option value="bo1">BO1</option>
+        <option value="bo3">BO3</option>
+        <option value="bo5">BO5</option></select
+      ><br /><br />
+      Status:
+      <select id="status" class="big-dropdown" name="status">
+        <option value="ipr">In Progress</option>
+        <option value="done">Done</option>
+        <option value="unplayed">Unplayed</option></select
+      ><br /><br />
+      Scores:<br />
+      <input
+        type="text"
+        id="t1_score"
+        name="score"
+        placeholder="Team 1 Score"
+      />
+      <input
+        type="text"
+        id="t2_score"
+        name="score"
+        placeholder="Team 2 Score"
+      /><br />
+      <input type="submit" value="Submit" />
+    </form>
+    <form name="b2" method="post" onsubmit="saveData('b2', event)" id="b2">
+      <h3>Game 2</h3>
+      <div class="team-info">
+        Team 1 Info:<br />
+        <input type="text" id="t1_name" name="name" placeholder="Name" />
+        <input type="text" id="t1_logo" name="logo" placeholder="Logo" />
+      </div>
+      <br />
+      <div class="team-info">
+        Team 2 Name:<br />
+        <input type="text" id="t2_name" name="name" placeholder="Name" />
+        <input type="text" id="t2_logo" name="logo" placeholder="Logo" />
+      </div>
+      <br />
+      Format:
+      <select id="format" class="big-dropdown" name="format">
+        <option value="bo1">BO1</option>
+        <option value="bo3">BO3</option>
+        <option value="bo5">BO5</option></select
+      ><br /><br />
+      Status:
+      <select id="status" class="big-dropdown" name="status">
+        <option value="ipr">In Progress</option>
+        <option value="done">Done</option>
+        <option value="unplayed">Unplayed</option></select
+      ><br /><br />
+      Scores:<br />
+      <input
+        type="text"
+        id="t1_score"
+        name="score"
+        placeholder="Team 1 Score"
+      />
+      <input
+        type="text"
+        id="t2_score"
+        name="score"
+        placeholder="Team 2 Score"
+      /><br />
+      <input type="submit" value="Submit" />
+    </form>
+    <form name="b3" method="post" onsubmit="saveData('b3', event)" id="b3">
+      <h3>Game 3</h3>
+      <div class="team-info">
+        Team 1 Info:<br />
+        <input type="text" id="t1_name" name="name" placeholder="Name" />
+        <input type="text" id="t1_logo" name="logo" placeholder="Logo" />
+      </div>
+      <br />
+      <div class="team-info">
+        Team 2 Name:<br />
+        <input type="text" id="t2_name" name="name" placeholder="Name" />
+        <input type="text" id="t2_logo" name="logo" placeholder="Logo" />
+      </div>
+      <br />
+      Format:
+      <select id="format" class="big-dropdown" name="format">
+        <option value="bo1">BO1</option>
+        <option value="bo3">BO3</option>
+        <option value="bo5">BO5</option></select
+      ><br /><br />
+      Status:
+      <select id="status" class="big-dropdown" name="status">
+        <option value="ipr">In Progress</option>
+        <option value="done">Done</option>
+        <option value="unplayed">Unplayed</option></select
+      ><br /><br />
+      Scores:<br />
+      <input
+        type="text"
+        id="t1_score"
+        name="score"
+        placeholder="Team 1 Score"
+      />
+      <input
+        type="text"
+        id="t2_score"
+        name="score"
+        placeholder="Team 2 Score"
+      /><br />
+      <input type="submit" value="Submit" />
+    </form>
+  </div>
+</div>
+
 <button class="collapsible rajdhani-medium" style="font-size: xx-large;">Casters
   <span class="dropdown-icon">&#9660;</span> <!-- Downward arrow icon -->
 </button>
