@@ -754,8 +754,8 @@ h1, h2, h3, h4, h5, h6, p, span, div, a {
 .caster-int{
   position: absolute;
   left: 375px;
-  height: 51px;
-  width: 380px;
+  height: 100px;
+  width: 280px;
   text-align: left;
   justify-content: center;
   align-content: center;
