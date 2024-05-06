@@ -75,7 +75,7 @@
         // Replace apostrophes with an empty string
         const fileName = cleanedInput.replace(/['’]/g, '');
 
-        return fileName;
+        return fileName.toUpperCase();
     }
 
     function setMapMode(map, divId){
