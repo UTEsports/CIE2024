@@ -33,6 +33,11 @@
   src: url('DrukFonts\\DrukText-Heavy-Trial.otf') format('opentype');
 }
 
+@font-face {
+  font-family: 'DrukBold';
+  src: url('DrukFonts\\Druk-Bold-Trial.otf') format('opentype');
+}
+
 
 body {
     font-family: 'Rajdhani', sans-serif;
@@ -102,6 +107,11 @@ body {
   .druk-heavy-text {
     font-family: "DrukHeavyText", sans-serif;
   }
+
+  .druk-bold {
+    font-family: "DrukBold", sans-serif;
+  }
+
 
   /* Druk Super Wide */
   .druk-super-wide {
