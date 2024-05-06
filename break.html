@@ -190,7 +190,10 @@
                 }
             } else{
                 document.getElementById('g1').src = 'assets\\break\\startingsoon_vs.png';
+                document.getElementById('b1t1l').classList.remove('gray-out');
+                document.getElementById('b1t2l').classList.remove('gray-out');
             }
+            
             if(localStorageValues['b2_status'] == 'done'){
                 if(parseInt(localStorageValues['b2_score1']) > parseInt(localStorageValues['b2_score2'])){
                     document.getElementById('g2').src = 'assets\\break\\startingsoon_blue.png';
@@ -203,7 +206,10 @@
                 }
             } else{
                 document.getElementById('g2').src = 'assets\\break\\startingsoon_vs.png';
+                document.getElementById('b2t1l').classList.remove('gray-out');
+                document.getElementById('b2t2l').classList.remove('gray-out');
             }
+
             if(localStorageValues['b3_status'] == 'done'){
                 if(parseInt(localStorageValues['b3_score1']) > parseInt(localStorageValues['b3_score2'])){
                     document.getElementById('g3').src = 'assets\\break\\startingsoon_blue.png';
@@ -214,15 +220,10 @@
                     document.getElementById('b3t1l').classList.add('gray-out');
                     document.getElementById('b3score').innerHTML = localStorageValues['b3_score1'] + " - " + localStorageValues['b3_score2'];
                 }
-            } else{
+            }else{
                 document.getElementById('g3').src = 'assets\\break\\startingsoon_vs.png';
-                document.getElementById('b1t1l').classList.remove('gray-out');
-                document.getElementById('b2t1l').classList.remove('gray-out');
-                document.getElementById('b3t1l').classList.remove('gray-out');
-                document.getElementById('b1t2l').classList.remove('gray-out');
-                document.getElementById('b2t2l').classList.remove('gray-out');
                 document.getElementById('b3t2l').classList.remove('gray-out');
-            }
+                document.getElementById('b3t1l').classList.remove('gray-out');
         }
 
     setInterval(function(){
