@@ -158,18 +158,6 @@
             <input type="text" id="t2_logo" name="logo" placeholder="Logo" />
           </div>
           <br />
-          Format:
-          <select id="format" class="big-dropdown" name="format">
-            <option value="bo1">BO1</option>
-            <option value="bo3">BO3</option>
-            <option value="bo5">BO5</option></select
-          ><br /><br />
-          Status:
-          <select id="status" class="big-dropdown" name="status">
-            <option value="ipr">In Progress</option>
-            <option value="done">Done</option>
-            <option value="unplayed">Unplayed</option></select
-          ><br /><br />
           Scores:<br />
           <input
             type="text"
@@ -183,6 +171,26 @@
             name="score"
             placeholder="Team 2 Score"
           /><br />
+          <br />
+          Format:
+          <select id="format" class="big-dropdown" name="format">
+            <option value="bo1">BO1</option>
+            <option value="bo3">BO3</option>
+            <option value="bo5">BO5</option></select
+          ><br /><br />
+          Status:
+          <select id="status" class="big-dropdown" name="status">
+            <option value="ipr">In Progress</option>
+            <option value="done">Done</option>
+            <option value="unplayed">Unplayed</option></select
+          ><br /><br />
+          Date:
+          <input
+            type="text"
+            id="date"
+            name="date"
+            placeholder="Date"
+          /><br /><br />
           <input type="submit" value="Submit" />
         </form>
         <form name="b2" method="post" onsubmit="saveData('b2', event)" id="b2">
@@ -199,18 +207,6 @@
             <input type="text" id="t2_logo" name="logo" placeholder="Logo" />
           </div>
           <br />
-          Format:
-          <select id="format" class="big-dropdown" name="format">
-            <option value="bo1">BO1</option>
-            <option value="bo3">BO3</option>
-            <option value="bo5">BO5</option></select
-          ><br /><br />
-          Status:
-          <select id="status" class="big-dropdown" name="status">
-            <option value="ipr">In Progress</option>
-            <option value="done">Done</option>
-            <option value="unplayed">Unplayed</option></select
-          ><br /><br />
           Scores:<br />
           <input
             type="text"
@@ -224,6 +220,26 @@
             name="score"
             placeholder="Team 2 Score"
           /><br />
+          <br />
+          Format:
+          <select id="format" class="big-dropdown" name="format">
+            <option value="bo1">BO1</option>
+            <option value="bo3">BO3</option>
+            <option value="bo5">BO5</option></select
+          ><br /><br />
+          Status:
+          <select id="status" class="big-dropdown" name="status">
+            <option value="ipr">In Progress</option>
+            <option value="done">Done</option>
+            <option value="unplayed">Unplayed</option></select
+          ><br /><br />
+          Date:
+          <input
+            type="text"
+            id="date"
+            name="date"
+            placeholder="Date"
+          /><br /><br />
           <input type="submit" value="Submit" />
         </form>
         <form name="b3" method="post" onsubmit="saveData('b3', event)" id="b3">
@@ -240,18 +256,6 @@
             <input type="text" id="t2_logo" name="logo" placeholder="Logo" />
           </div>
           <br />
-          Format:
-          <select id="format" class="big-dropdown" name="format">
-            <option value="bo1">BO1</option>
-            <option value="bo3">BO3</option>
-            <option value="bo5">BO5</option></select
-          ><br /><br />
-          Status:
-          <select id="status" class="big-dropdown" name="status">
-            <option value="ipr">In Progress</option>
-            <option value="done">Done</option>
-            <option value="unplayed">Unplayed</option></select
-          ><br /><br />
           Scores:<br />
           <input
             type="text"
@@ -265,6 +269,26 @@
             name="score"
             placeholder="Team 2 Score"
           /><br />
+          <br />
+          Format:
+          <select id="format" class="big-dropdown" name="format">
+            <option value="bo1">BO1</option>
+            <option value="bo3">BO3</option>
+            <option value="bo5">BO5</option></select
+          ><br /><br />
+          Status:
+          <select id="status" class="big-dropdown" name="status">
+            <option value="ipr">In Progress</option>
+            <option value="done">Done</option>
+            <option value="unplayed">Unplayed</option></select
+          ><br /><br />
+          Date:
+          <input
+            type="text"
+            id="date"
+            name="date"
+            placeholder="Date"
+          /><br /><br />
           <input type="submit" value="Submit" />
         </form>
       </div>
@@ -775,21 +799,6 @@
     </div>
 
     <script>
-      let currentZoom = 1;
-
-      function zoomIn() {
-        currentZoom += 0.1; // Increase zoom level
-        document.body.style.zoom = currentZoom; // Apply new zoom level to body
-      }
-
-      function zoomOut() {
-        if (currentZoom > 0.1) {
-          // Ensure minimum zoom level
-          currentZoom -= 0.1; // Decrease zoom level
-          document.body.style.zoom = currentZoom; // Apply new zoom level to body
-        }
-      }
-
       const radioButtons = document.querySelectorAll(
         'input[type="radio"][name="formType"]'
       );

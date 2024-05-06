@@ -10,10 +10,60 @@
     <div class="stack-container">
       <div style="color: white">
         <img class="stacked-image" src="assets\break\starting_displaybox.png">
-        <div id="break-title" style=""></div>
-        <img class="stacked-image" src="assets\break\startingsoon_vs.png" style="position: absolute; top: 306px; left: 86px;">
-        <img class="stacked-image" src="assets\break\startingsoon_vs.png" style="position: absolute; top: 534.15px; left: 86px;">
-        <img class="stacked-image" src="assets\break\startingsoon_vs.png" style="position: absolute; top: 762.3px; left: 86px;">
+        
+        <div class="druk-wide-bold" id="break-title" style="position: absolute; width: 762px; height: 24px; top: 244px; left: 86px; font-size: 20px; color: white; text-align: left;"></div>
+        
+        <img id="g1t2l">
+
+        <img class="stacked-image" src="assets\break\startingsoon_vs.png" style="position: absolute; top: 306px; left: 86px;" id="'g1">
+        <div id="g1t1n"></div>
+        <div id="g1t2n"></div>
+        <div id="g1date"></div>
+        <img id="g1t1l">
+        <img id="g1t2l">
+
+        <img class="stacked-image" src="assets\break\startingsoon_vs.png" style="position: absolute; top: 534.15px; left: 86px;" id="g2">
+        <div id="g2t1n"></div>
+        <div id="g2t2n"></div>
+        <div id="g2date"></div>
+        <img id="g2t1l">
+        <img id="g2t2l">
+
+        <img class="stacked-image" src="assets\break\startingsoon_vs.png" style="position: absolute; top: 762.3px; left: 86px;" id="g3">
+        <div id="g3t1n"></div>
+        <div id="g3t2n"></div>
+        <div id="g3date"></div>
+        <img id="g3t1l">
     </div>
+    <script>
+        function getTeams(){
+            // Array to hold the variable names
+            const variables = [
+                "b1_format", "b2_date", "b1_logo", "b2_name", "b1_date",
+                "b1_score", "b1_name", "b2_format", "b3_name", "b1_status",
+                "b2_logo", "b2_score", "b3_format", "b3_date", "b3_logo",
+                "b3_status", "b2_status", "b3_score"
+            ];
+
+            // Object to hold the fetched values
+            const values = {};
+
+            // Loop through the variable names
+            variables.forEach(variable => {
+                // Fetch the value from local storage
+                const value = localStorage.getItem(variable);
+                // Store the value in the object
+                values[variable] = value;
+            });
+
+            // Display the fetched values
+            console.log(values);
+
+        }
+
+    setInterval(function(){
+        getTeams();
+    }, 1 * 1000)
+    </script>
   </body>
 </html>
