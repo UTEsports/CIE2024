@@ -751,10 +751,11 @@ h1, h2, h3, h4, h5, h6, p, span, div, a {
 
 #caster-subtitle{
   position: absolute;
+  background-color: black;
   height: 38px;
-  width: 157px;
+  width: 400px;
   top: 942px;
-  left: 680px;
+  left: 560px;
   z-index: 2;
   color: white;
   justify-content: center;
