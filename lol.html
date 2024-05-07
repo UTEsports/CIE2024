@@ -701,6 +701,11 @@ function swap(button) {
       localStorage.setItem('t1_name', t2);
       localStorage.setItem('t2_name', t1);
 
+      let t1s = localStorage.getItem('t1_score');
+      let t2s = localStorage.getItem('t2_score');
+      localStorage.setItem('t1_score', t2);
+      localStorage.setItem('t2_score', t1);
+
     // Swap scores (assuming it's a best-of series)
     for (let i = 1; i <= 5; i++) {
       // Swap scores for each map
