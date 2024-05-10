@@ -98,8 +98,6 @@
 </head>
 <body style="background-color: #f1f1f1;">
 
-<a href="index.html" class="back-button">Back</a> <!-- Back button -->
-
 <h1>Valorant Controller</h1>
 <button onclick="zoomIn()">Zoom In</button>
 <button onclick="zoomOut()">Zoom Out</button>
@@ -754,16 +752,16 @@ function resetForm(button) {
 function swap(button) {
   for (let i = 1; i <= 5; i++) {
       // Swap hero names
-      let t1Hero = localStorage.getItem(`t1roster_player${i}_hero`);
-      let t2Hero = localStorage.getItem(`t2roster_player${i + 5}_hero`);
-      localStorage.setItem(`t1roster_player${i}_hero`, t2Hero);
-      localStorage.setItem(`t2roster_player${i + 5}_hero`, t1Hero);
+      let t1Hero = localStorage.getItem(`valr1roster_player${i}`);
+      let t2Hero = localStorage.getItem(`valr2roster_player${i + 5}`);
+      localStorage.setItem(`valr1roster_player${i}`, t2Hero);
+      localStorage.setItem(`valr2roster_player${i + 5}`, t1Hero);
 
       // Swap player names
-      let t1Name = localStorage.getItem(`t1roster_player${i}_name_ow`);
-      let t2Name = localStorage.getItem(`t2roster_player${i + 5}_name_ow`);
-      localStorage.setItem(`t1roster_player${i}_name_ow`, t2Name);
-      localStorage.setItem(`t2roster_player${i + 5}_name_ow`, t1Name);
+      let t1Name = localStorage.getItem(`valr1roster_player${i}_name`);
+      let t2Name = localStorage.getItem(`valr2roster_player${i + 5}_name`);
+      localStorage.setItem(`valr1roster_player${i}_name`, t2Name);
+      localStorage.setItem(`valr2roster_player${i + 5}_name`, t1Name);
 
       // Swap logos (if necessary)
       let t1Logo = localStorage.getItem('t1_logo');
@@ -779,17 +777,17 @@ function swap(button) {
     // Swap scores (assuming it's a best-of series)
     for (let i = 1; i <= 5; i++) {
       // Swap scores for each map
-      let t1MapScore = localStorage.getItem(`bo5m${i}_team1_map${i}_score`);
-      let t2MapScore = localStorage.getItem(`bo5m${i}_team2_map${i}_score`);
-      localStorage.setItem(`bo5m${i}_team1_map${i}_score`, t2MapScore);
-      localStorage.setItem(`bo5m${i}_team2_map${i}_score`, t1MapScore);
+      let t1MapScore = localStorage.getItem(`valbo5m${i}_team1_map${i}_score`);
+      let t2MapScore = localStorage.getItem(`valbo5m${i}_team2_map${i}_score`);
+      localStorage.setItem(`valbo5m${i}_team1_map${i}_score`, t2MapScore);
+      localStorage.setItem(`valbo5m${i}_team2_map${i}_score`, t1MapScore);
     }
     for (let i = 1; i <= 3; i++) {
       // Swap scores for each map
-      let t1MapScore = localStorage.getItem(`bo3m${i}_team1_map${i}_score`);
-      let t2MapScore = localStorage.getItem(`bo3m${i}_team2_map${i}_score`);
-      localStorage.setItem(`bo3m${i}_team1_map${i}_score`, t2MapScore);
-      localStorage.setItem(`bo3m${i}_team2_map${i}_score`, t1MapScore);
+      let t1MapScore = localStorage.getItem(`valbo3m${i}_team1_map${i}_score`);
+      let t2MapScore = localStorage.getItem(`valbo3m${i}_team2_map${i}_score`);
+      localStorage.setItem(`valbo3m${i}_team1_map${i}_score`, t2MapScore);
+      localStorage.setItem(`valbo3m${i}_team2_map${i}_score`, t1MapScore);
     }
 }
 
