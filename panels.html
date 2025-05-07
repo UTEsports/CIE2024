@@ -109,170 +109,6 @@
     <input type="text" id="title" name="title">
     <input type="submit" value="Submit">
   </form>
-
-  <button class="collapsible rajdhani-medium" style="font-size: xx-large">
-    Break Screen <span class="dropdown-icon">&#9660;</span>
-    <!-- Downward arrow icon -->
-  </button>
-  <div class="content">
-    <button
-      type="button"
-      onclick="resetForm(this)"
-      class="reset"
-      style="font-size: xx-large"
-    >
-      Reset Form</button
-    ><br />
-    <div
-      class="content"
-      style="display: flex; justify-content: center; align-items: center"
-    >
-      <form name="b1" method="post" onsubmit="saveData('b1', event)" id="b1">
-        <h3>Game 1</h3>
-        <div class="team-info">
-          Team 1 Info:<br />
-          <input type="text" id="t1_name" name="name1" placeholder="Name" />
-          <input type="text" id="t1_logo" name="logo1" placeholder="Logo" />
-        </div>
-        <br />
-        <div class="team-info">
-          Team 2 Name:<br />
-          <input type="text" id="t2_name" name="name2" placeholder="Name" />
-          <input type="text" id="t2_logo" name="logo2" placeholder="Logo" />
-        </div>
-        <br />
-        Scores:<br />
-        <input
-          type="text"
-          id="t1_score"
-          name="score1"
-          placeholder="Team 1 Score"
-        />
-        <input
-          type="text"
-          id="t2_score"
-          name="score2"
-          placeholder="Team 2 Score"
-        /><br />
-        <br />
-        Format:
-        <select id="format" class="big-dropdown" name="format">
-          <option value="bo1">BO1</option>
-          <option value="bo3">BO3</option>
-          <option value="bo5">BO5</option></select
-        ><br /><br />
-        Status:
-        <select id="status" class="big-dropdown" name="status">
-          <option value="unplayed">Unplayed</option>
-          <option value="done">Done</option></select
-        ><br /><br />
-        Date:
-        <input
-          type="text"
-          id="date"
-          name="date"
-          placeholder="Date"
-        /><br /><br />
-        <input type="submit" value="Submit" />
-      </form>
-      <form name="b2" method="post" onsubmit="saveData('b2', event)" id="b2">
-        <h3>Game 2</h3>
-        <div class="team-info">
-          Team 1 Info:<br />
-          <input type="text" id="t1_name" name="name1" placeholder="Name" />
-          <input type="text" id="t1_logo" name="logo1" placeholder="Logo" />
-        </div>
-        <br />
-        <div class="team-info">
-          Team 2 Name:<br />
-          <input type="text" id="t2_name" name="name2" placeholder="Name" />
-          <input type="text" id="t2_logo" name="logo2" placeholder="Logo" />
-        </div>
-        <br />
-        Scores:<br />
-        <input
-          type="text"
-          id="t1_score"
-          name="score1"
-          placeholder="Team 1 Score"
-        />
-        <input
-          type="text"
-          id="t2_score"
-          name="score2"
-          placeholder="Team 2 Score"
-        /><br />
-        <br />
-        Format:
-        <select id="format" class="big-dropdown" name="format">
-          <option value="bo1">BO1</option>
-          <option value="bo3">BO3</option>
-          <option value="bo5">BO5</option></select
-        ><br /><br />
-        Status:
-        <select id="status" class="big-dropdown" name="status">
-          <option value="unplayed">Unplayed</option>
-          <option value="done">Done</option></select
-        ><br /><br />
-        Date:
-        <input
-          type="text"
-          id="date"
-          name="date"
-          placeholder="Date"
-        /><br /><br />
-        <input type="submit" value="Submit" />
-      </form>
-      <form name="b3" method="post" onsubmit="saveData('b3', event)" id="b3">
-        <h3>Game 3</h3>
-        <div class="team-info">
-          Team 1 Info:<br />
-          <input type="text" id="t1_name" name="name1" placeholder="Name" />
-          <input type="text" id="t1_logo" name="logo1" placeholder="Logo" />
-        </div>
-        <br />
-        <div class="team-info">
-          Team 2 Name:<br />
-          <input type="text" id="t2_name" name="name2" placeholder="Name" />
-          <input type="text" id="t2_logo" name="logo2" placeholder="Logo" />
-        </div>
-        <br />
-        Scores:<br />
-        <input
-          type="text"
-          id="t1_score"
-          name="score1"
-          placeholder="Team 1 Score"
-        />
-        <input
-          type="text"
-          id="t2_score"
-          name="score2"
-          placeholder="Team 2 Score"
-        /><br />
-        <br />
-        Format:
-        <select id="format" class="big-dropdown" name="format">
-          <option value="bo1">BO1</option>
-          <option value="bo3">BO3</option>
-          <option value="bo5">BO5</option></select
-        ><br /><br />
-        Status:
-        <select id="status" class="big-dropdown" name="status">
-          <option value="unplayed">Unplayed</option>
-          <option value="done">Done</option></select
-        ><br /><br />
-        Date:
-        <input
-          type="text"
-          id="date"
-          name="date"
-          placeholder="Date"
-        /><br /><br />
-        <input type="submit" value="Submit" />
-      </form>
-    </div>
-  </div>
   
   <button class="collapsible rajdhani-medium" style="font-size: xx-large;">2 Panelists
     <span class="dropdown-icon">&#9660;</span> <!-- Downward arrow icon -->
@@ -286,14 +122,10 @@
           <div class="column">
             Panelist 1 Name:<br>
             <input type="text" id="name1" name="name1"><br>
-            Panelist 1 Pronouns:<br>
-            <input type="text" id="noun1" name="noun1"><br>
           </div>
           <div class="column">
             Panelist 2 Name:<br>
             <input type="text" id="name2" name="name2"><br>
-            Panelist 2 Pronouns:<br>
-            <input type="text" id="noun2" name="noun2"><br>
           </div>
         </div>
         <button type="submit">Submit</button>
@@ -313,20 +145,17 @@
           <div class="column">
             Panelist 1 Name:<br>
             <input type="text" id="name1" name="name1"><br>
-            Panelist 1 Pronouns:<br>
-            <input type="text" id="noun1" name="noun1"><br>
+            
         </div>
         <div class="column">
             Panelist 2 Name:<br>
             <input type="text" id="name2" name="name2"><br>
-            Panelist 2 Pronouns:<br>
-            <input type="text" id="noun2" name="noun2"><br>
+            
         </div>
         <div class="column">
             Panelist 3 Name:<br>
             <input type="text" id="name3" name="name3"><br>
-            Panelist 3 Pronouns:<br>
-            <input type="text" id="noun3" name="noun3"><br>
+            
         </div>
         </div>
         <button type="submit">Submit</button>
@@ -346,26 +175,22 @@
           <div class="column">
             Panelist 1 Name:<br>
             <input type="text" id="name1" name="name1"><br>
-            Panelist 1 Pronouns:<br>
-            <input type="text" id="noun1" name="noun1"><br>
+            
         </div>
         <div class="column">
             Panelist 2 Name:<br>
             <input type="text" id="name2" name="name2"><br>
-            Panelist 2 Pronouns:<br>
-            <input type="text" id="noun2" name="noun2"><br>
+            
         </div>
         <div class="column">
             Panelist 3 Name:<br>
             <input type="text" id="name3" name="name3"><br>
-            Panelist 3 Pronouns:<br>
-            <input type="text" id="noun3" name="noun3"><br>
+            
         </div>
         <div class="column">
             Panelist 4 Name:<br>
             <input type="text" id="name4" name="name4"><br>
-            Panelist 4 Pronouns:<br>
-            <input type="text" id="noun4" name="noun4"><br>
+            
         </div>
         </div>
         <button type="submit">Submit</button>
@@ -385,32 +210,27 @@
           <div class="column">
             Panelist 1 Name:<br>
             <input type="text" id="name1" name="name1"><br>
-            Panelist 1 Pronouns:<br>
-            <input type="text" id="noun1" name="noun1"><br>
+            
         </div>
         <div class="column">
             Panelist 2 Name:<br>
             <input type="text" id="name2" name="name2"><br>
-            Panelist 2 Pronouns:<br>
-            <input type="text" id="noun2" name="noun2"><br>
+            
         </div>
         <div class="column">
             Panelist 3 Name:<br>
             <input type="text" id="name3" name="name3"><br>
-            Panelist 3 Pronouns:<br>
-            <input type="text" id="noun3" name="noun3"><br>
+            
         </div>
         <div class="column">
             Panelist 4 Name:<br>
             <input type="text" id="name4" name="name4"><br>
-            Panelist 4 Pronouns:<br>
-            <input type="text" id="noun4" name="noun4"><br>
+            
         </div>
         <div class="column">
             Panelist 5 Name:<br>
             <input type="text" id="name5" name="name5"><br>
-            Panelist 5 Pronouns:<br>
-            <input type="text" id="noun5" name="noun5"><br>
+            
         </div>
         </div>
         <button type="submit">Submit</button>
@@ -430,38 +250,32 @@
           <div class="column">
             Panelist 1 Name:<br>
             <input type="text" id="name1" name="name1"><br>
-            Panelist 1 Pronouns:<br>
-            <input type="text" id="noun1" name="noun1"><br>
+            
         </div>
         <div class="column">
             Panelist 2 Name:<br>
             <input type="text" id="name2" name="name2"><br>
-            Panelist 2 Pronouns:<br>
-            <input type="text" id="noun2" name="noun2"><br>
+            
         </div>
         <div class="column">
             Panelist 3 Name:<br>
             <input type="text" id="name3" name="name3"><br>
-            Panelist 3 Pronouns:<br>
-            <input type="text" id="noun3" name="noun3"><br>
+            
         </div>
         <div class="column">
             Panelist 4 Name:<br>
             <input type="text" id="name4" name="name4"><br>
-            Panelist 4 Pronouns:<br>
-            <input type="text" id="noun4" name="noun4"><br>
+            
         </div>
         <div class="column">
             Panelist 5 Name:<br>
             <input type="text" id="name5" name="name5"><br>
-            Panelist 5 Pronouns:<br>
-            <input type="text" id="noun5" name="noun5"><br>
+            
         </div>
         <div class="column">
             Panelist 6 Name:<br>
             <input type="text" id="name6" name="name6"><br>
-            Panelist 6 Pronouns:<br>
-            <input type="text" id="noun6" name="noun6"><br>
+            
         </div>
         
         </div>

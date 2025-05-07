@@ -8,25 +8,59 @@
   <body>
     <!-- Container for stacking -->
     <div class="stack-container">
-      <img class="stacked-image" src="panel_assets\4.png" alt="Image Description">
-      <div id="p1" class="panel_label druk-medium-text" style="top: 406px; left: 429px;"></div>
-      <div id="p2" class="panel_label druk-medium-text" style="top: 406px; right: 429px;"></div>
-      <div id="p3" class="panel_label druk-medium-text" style="top: 785px; left: 429px;"></div>
-      <div id="p4" class="panel_label druk-medium-text" style="top: 785px; right: 429px;"></div>
-      <div id="panel-streamtitle" class="druk-wide-heavy" style="width: 1287px; height: 124px; top: 922px; left: 560px; position: absolute; z-index: 3; justify-content: center; align-content: center; color: white;"></div>
+      <img
+        class="stacked-image"
+        src="panel_assets\4.png"
+        alt="Image Description"
+      />
+      <div
+        id="p1"
+        class="panel_label druk-medium-text"
+        style="top: 406px; left: 429px"
+      ></div>
+      <div
+        id="p2"
+        class="panel_label druk-medium-text"
+        style="top: 406px; right: 429px"
+      ></div>
+      <div
+        id="p3"
+        class="panel_label druk-medium-text"
+        style="top: 785px; left: 429px"
+      ></div>
+      <div
+        id="p4"
+        class="panel_label druk-medium-text"
+        style="top: 785px; right: 429px"
+      ></div>
+      <div
+        id="panel-streamtitle"
+        class="druk-wide-heavy"
+        style="
+          width: 1287px;
+          height: 124px;
+          top: 922px;
+          left: 560px;
+          position: absolute;
+          z-index: 3;
+          justify-content: center;
+          align-content: center;
+          color: white;
+        "
+      ></div>
 
       <script>
         getPanelists();
         function getPanelists() {
           for (let i = 1; i <= 4; i++) {
-            document.getElementById('panel-streamtitle').innerHTML = localStorage.getItem('stream_title');
+            document.getElementById("panel-streamtitle").innerHTML =
+              localStorage.getItem("stream_title");
             // Get the name and pronouns from localStorage for each panelist
             let name = localStorage.getItem("4p_name" + i);
             let pronouns = localStorage.getItem("4p_noun" + i);
 
             // Update the HTML content for the corresponding panelist
-            document.getElementById("p" + i).innerHTML =
-            name + pronouns ;
+            document.getElementById("p" + i).innerHTML = name;
           }
         }
 
